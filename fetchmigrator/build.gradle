@@ -65,12 +65,12 @@ dependencies {
 }
 
 publish {
-    userOrg = 'tonyofrancis'
-    groupId = 'androidx.tonyodev.fetchmigrator'
+    userOrg = 'Kuhouinn'
+    groupId = 'androidx.Kuhouinn.fetchmigrator'
     artifactId = 'xfetchmigrator'
     publishVersion = library_version
     desc = 'Migration Assistant for Fetch'
-    website = 'https://github.com/tonyofrancis/fetch'
+    website = 'https://github.com/Kuhouinn/Fetch3.1.6Fixed'
 }
 
 tasks.withType(Javadoc).all {

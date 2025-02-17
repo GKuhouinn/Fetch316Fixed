@@ -64,12 +64,12 @@ dependencies {
 }
 
 publish {
-    userOrg = 'tonyofrancis'
-    groupId = 'androidx.tonyodev.fetch2core'
+    userOrg = 'Kuhouinn'
+    groupId = 'androidx.Kuhouinn.fetch2core'
     artifactId = 'xfetch2core'
     publishVersion = library_version
     desc = 'Fetch Core Library'
-    website = 'https://github.com/tonyofrancis/fetch'
+    website = 'https://github.com/Kuhouinn/Fetch3.1.6Fixed'
 }
 
 tasks.withType(Javadoc).all {

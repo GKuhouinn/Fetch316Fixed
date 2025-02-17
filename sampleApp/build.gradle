@@ -21,7 +21,7 @@ android {
     compileSdkVersion library_compile_version
     buildToolsVersion library_build_tools_version
     defaultConfig {
-        applicationId "com.tonyodev.fetchapp"
+        applicationId "com.Kuhouinn.fetchapp"
         minSdkVersion library_min_version
         targetSdkVersion library_target_version
         versionCode 8

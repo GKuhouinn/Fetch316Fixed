@@ -69,12 +69,12 @@ dependencies {
 }
 
 publish {
-    userOrg = 'tonyofrancis'
-    groupId = 'androidx.tonyodev.fetch2fileserver'
+    userOrg = 'Kuhouinn'
+    groupId = 'androidx.Kuhouinn.fetch2fileserver'
     artifactId = 'xfetch2fileserver'
     publishVersion = library_version
     desc = 'Fetch File Server'
-    website = 'https://github.com/tonyofrancis/fetch'
+    website = 'https://github.com/Kuhouinn/Fetch3.1.6Fixed'
 }
 
 tasks.withType(Javadoc).all {

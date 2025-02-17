@@ -72,12 +72,12 @@ dependencies {
 }
 
 publish {
-    userOrg = 'tonyofrancis'
-    groupId = 'androidx.tonyodev.fetch2okhttp'
+    userOrg = 'Kuhouinn'
+    groupId = 'androidx.Kuhouinn.fetch2okhttp'
     artifactId = 'xfetch2okhttp'
     publishVersion = library_version
     desc = 'OkHttp Downloader for Fetch2'
-    website = 'https://github.com/tonyofrancis/fetch'
+    website = 'https://github.com/Kuhouinn/Fetch3.1.6Fixed'
 }
 
 tasks.withType(Javadoc).all {
