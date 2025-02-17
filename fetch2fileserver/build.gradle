@@ -67,24 +67,12 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            from components.release
-            groupId = 'androidx.Kuhouinn.fetch2fileserver'
-            artifactId = 'xfetch2fileserver'
-            version = library_version
-        }
-    }
-
-    repositories {
-        maven {
-            name = 'JitPack'
-            url = uri("https://jitpack.io")
-        }
-    }
+ext {
+    releaseName = 'Kuhouinn-Fetch3.1.6Fixed'
+    releaseDescription = 'Fetch is a simple, powerful, customizable file download manager library for Android.'
+    releaseGroupId = 'com.github.Kuhouinn'
+    releaseArtifactId = 'fetch2fileserver'
+    releaseVersion = library_version
 }
 
-tasks.withType(Javadoc).all {
-    enabled = false
-}
+apply from: '../publish_config.gradle'
