@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.Manifest;
 
@@ -12,11 +12,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
-import com.tonyodev.fetch2.AbstractFetchListener;
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Fetch;
-import com.tonyodev.fetch2.FetchListener;
-import com.tonyodev.fetch2.Request;
+import com.Kuhouinn.fetch2.AbstractFetchListener;
+import com.Kuhouinn.fetch2.Download;
+import com.Kuhouinn.fetch2.Fetch;
+import com.Kuhouinn.fetch2.FetchListener;
+import com.Kuhouinn.fetch2.Request;
 
 import org.jetbrains.annotations.NotNull;
 

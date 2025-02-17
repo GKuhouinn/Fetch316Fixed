@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,8 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Status;
+import com.Kuhouinn.fetch2.Download;
+import com.Kuhouinn.fetch2.Status;
 
 import java.io.File;
 import java.util.ArrayList;

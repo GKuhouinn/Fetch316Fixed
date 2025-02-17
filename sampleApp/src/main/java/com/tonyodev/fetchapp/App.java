@@ -1,13 +1,13 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.app.Application;
 
-import com.tonyodev.fetch2.HttpUrlConnectionDownloader;
-import com.tonyodev.fetch2core.Downloader;
-import com.tonyodev.fetch2.Fetch;
-import com.tonyodev.fetch2.FetchConfiguration;
-import com.tonyodev.fetch2okhttp.OkHttpDownloader;
-import com.tonyodev.fetch2rx.RxFetch;
+import com.Kuhouinn.fetch2.HttpUrlConnectionDownloader;
+import com.Kuhouinn.fetch2core.Downloader;
+import com.Kuhouinn.fetch2.Fetch;
+import com.Kuhouinn.fetch2.FetchConfiguration;
+import com.Kuhouinn.fetch2okhttp.OkHttpDownloader;
+import com.Kuhouinn.fetch2rx.RxFetch;
 
 import okhttp3.OkHttpClient;
 import timber.log.Timber;

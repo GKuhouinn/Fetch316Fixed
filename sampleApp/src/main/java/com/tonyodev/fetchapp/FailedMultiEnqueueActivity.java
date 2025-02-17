@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
@@ -6,9 +6,9 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
-import com.tonyodev.fetch2.Fetch;
-import com.tonyodev.fetch2.FetchConfiguration;
-import com.tonyodev.fetch2.Request;
+import com.Kuhouinn.fetch2.Fetch;
+import com.Kuhouinn.fetch2.FetchConfiguration;
+import com.Kuhouinn.fetch2.Request;
 
 import java.util.ArrayList;
 import java.util.List;

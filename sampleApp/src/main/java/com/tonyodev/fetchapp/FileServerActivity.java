@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -10,21 +10,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tonyodev.fetch2.AbstractFetchListener;
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Error;
-import com.tonyodev.fetch2core.Downloader;
-import com.tonyodev.fetch2.Fetch;
-import com.tonyodev.fetch2.FetchConfiguration;
-import com.tonyodev.fetch2.FetchListener;
-import com.tonyodev.fetch2.Priority;
-import com.tonyodev.fetch2.Request;
-import com.tonyodev.fetch2core.FetchCoreUtils;
-import com.tonyodev.fetch2core.FileResource;
-import com.tonyodev.fetch2core.MutableExtras;
-import com.tonyodev.fetch2fileserver.FetchFileServer;
-import com.tonyodev.fetch2.FetchFileServerDownloader;
-import com.tonyodev.fetch2core.FetchFileServerUriBuilder;
+import com.Kuhouinn.fetch2.AbstractFetchListener;
+import com.Kuhouinn.fetch2.Download;
+import com.Kuhouinn.fetch2.Error;
+import com.Kuhouinn.fetch2core.Downloader;
+import com.Kuhouinn.fetch2.Fetch;
+import com.Kuhouinn.fetch2.FetchConfiguration;
+import com.Kuhouinn.fetch2.FetchListener;
+import com.Kuhouinn.fetch2.Priority;
+import com.Kuhouinn.fetch2.Request;
+import com.Kuhouinn.fetch2core.FetchCoreUtils;
+import com.Kuhouinn.fetch2core.FileResource;
+import com.Kuhouinn.fetch2core.MutableExtras;
+import com.Kuhouinn.fetch2fileserver.FetchFileServer;
+import com.Kuhouinn.fetch2.FetchFileServerDownloader;
+import com.Kuhouinn.fetch2core.FetchFileServerUriBuilder;
 
 import org.jetbrains.annotations.NotNull;
 

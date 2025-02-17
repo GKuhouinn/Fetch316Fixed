@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp
+package com.Kuhouinn.fetchapp
 
 import org.junit.Test
 

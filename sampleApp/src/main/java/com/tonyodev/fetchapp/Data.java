@@ -1,12 +1,12 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
 
-import com.tonyodev.fetch2.Priority;
-import com.tonyodev.fetch2.Request;
+import com.Kuhouinn.fetch2.Priority;
+import com.Kuhouinn.fetch2.Request;
 
 import java.util.ArrayList;
 import java.util.List;

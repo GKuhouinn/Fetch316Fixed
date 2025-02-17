@@ -1,4 +1,4 @@
-package com.tonyodev.fetchapp;
+package com.Kuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,17 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SwitchCompat;
 import android.view.View;
 
-import com.tonyodev.fetch2.AbstractFetchListener;
-import com.tonyodev.fetch2.DefaultFetchNotificationManager;
-import com.tonyodev.fetch2.Download;
-import com.tonyodev.fetch2.Error;
-import com.tonyodev.fetch2core.Downloader;
-import com.tonyodev.fetch2.Fetch;
-import com.tonyodev.fetch2.FetchListener;
-import com.tonyodev.fetch2.NetworkType;
-import com.tonyodev.fetch2.Request;
-import com.tonyodev.fetch2.FetchConfiguration;
-import com.tonyodev.fetch2okhttp.OkHttpDownloader;
+import com.Kuhouinn.fetch2.AbstractFetchListener;
+import com.Kuhouinn.fetch2.DefaultFetchNotificationManager;
+import com.Kuhouinn.fetch2.Download;
+import com.Kuhouinn.fetch2.Error;
+import com.Kuhouinn.fetch2core.Downloader;
+import com.Kuhouinn.fetch2.Fetch;
+import com.Kuhouinn.fetch2.FetchListener;
+import com.Kuhouinn.fetch2.NetworkType;
+import com.Kuhouinn.fetch2.Request;
+import com.Kuhouinn.fetch2.FetchConfiguration;
+import com.Kuhouinn.fetch2okhttp.OkHttpDownloader;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
