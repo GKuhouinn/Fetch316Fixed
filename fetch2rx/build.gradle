@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'maven-publish'
 
 buildscript {
     apply from: '../versions.gradle'
@@ -13,7 +13,6 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_tools_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.novoda:bintray-release:$novoda_bintray_version"
     }
 }
 
@@ -65,13 +64,22 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }
 
-publish {
-    userOrg = 'Kuhouinn'
-    groupId = 'androidx.Kuhouinn.fetch2rx'
-    artifactId = 'xfetch2rx'
-    publishVersion = library_version
-    desc = 'RxJava extensions for Fetch2'
-    website = 'https://github.com/Kuhouinn/Fetch3.1.6Fixed'
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'androidx.Kuhouinn.fetch2rx'
+            artifactId = 'xfetch2rx'
+            version = library_version
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'JitPack'
+            url = uri("https://jitpack.io")
+        }
+    }
 }
 
 tasks.withType(Javadoc).all {
