@@ -74,7 +74,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.0] /Users/tony
 		ADDED from /Users/tonyofrancis/Git/Fetch/serversampleapp/src/main/AndroidManifest.xml:14:9-35
 	android:theme
 		ADDED from /Users/tonyofrancis/Git/Fetch/serversampleapp/src/main/AndroidManifest.xml:19:9-40
-activity#com.Kuhouinn.serversampleapp.MainActivity
+activity#com.tonyodev.serversampleapp.MainActivity
 ADDED from /Users/tonyofrancis/Git/Fetch/serversampleapp/src/main/AndroidManifest.xml:20:9-26:20
 	android:name
 		ADDED from /Users/tonyofrancis/Git/Fetch/serversampleapp/src/main/AndroidManifest.xml:20:19-47

@@ -71,7 +71,7 @@ dependencies {
 
 //publish {
 //    userOrg = 'tonyofrancis'
-//    groupId = 'com.Kuhouinn.fetch2downloaders'
+//    groupId = 'com.tonyodev.fetch2downloaders'
 //    artifactId = 'fetch2downloaders'
 //    publishVersion = library_version
 //    desc = 'Downloaders for Fetch2'

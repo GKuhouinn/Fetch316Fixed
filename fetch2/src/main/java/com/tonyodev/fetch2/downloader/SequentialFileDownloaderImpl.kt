@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2.downloader
+package com.tonyodev.fetch2.downloader
 
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.helper.FileDownloaderDelegate
-import com.Kuhouinn.fetch2.provider.NetworkInfoProvider
-import com.Kuhouinn.fetch2.util.*
-import com.Kuhouinn.fetch2core.*
+import com.tonyodev.fetch2.*
+import com.tonyodev.fetch2.exception.FetchException
+import com.tonyodev.fetch2.helper.FileDownloaderDelegate
+import com.tonyodev.fetch2.provider.NetworkInfoProvider
+import com.tonyodev.fetch2.util.*
+import com.tonyodev.fetch2core.*
 import java.io.*
 import java.net.HttpURLConnection
 import kotlin.math.ceil

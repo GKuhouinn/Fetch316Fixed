@@ -56,7 +56,7 @@ How to use Fetch
 Using Fetch is easy! Just add the Gradle dependency to your application's build.gradle file.
 
 ```java
-implementation "com.Kuhouinn.fetch2:fetch2:3.0.12"
+implementation "com.tonyodev.fetch2:fetch2:3.0.12"
 ```
 Androidx use:
 ```java
@@ -226,7 +226,7 @@ to use the OkHttp Downloader instead. You can create your custom downloaders
 if necessary. See the Java docs for details.
 
 ```java
-implementation "com.Kuhouinn.fetch2okhttp:fetch2okhttp:3.0.12"
+implementation "com.tonyodev.fetch2okhttp:fetch2okhttp:3.0.12"
 ```
 Androidx use:
 ```java
@@ -252,7 +252,7 @@ If you would like to take advantage of RxJava2 features when using Fetch,
 add the following gradle dependency to your application's build.gradle file.
 
 ```java
-implementation "com.Kuhouinn.fetch2rx:fetch2rx:3.0.12"
+implementation "com.tonyodev.fetch2rx:fetch2rx:3.0.12"
 ```
 Androidx use:
 ```java
@@ -292,7 +292,7 @@ added in the coming days.
 
 Start using FetchFileServer by adding the gradle dependency to your application's build.gradle file.
 ```java
-implementation "com.Kuhouinn.fetch2fileserver:fetch2fileserver:3.0.12"
+implementation "com.tonyodev.fetch2fileserver:fetch2fileserver:3.0.12"
 ```
 Androidx use: 
 ```java
@@ -405,7 +405,7 @@ Fetch1 Migration
 
 Migrate downloads from Fetch1 to Fetch2 using the migration assistant. Add the following gradle dependency to your application's build.gradle file.
 ```java
-implementation "com.Kuhouinn.fetchmigrator:fetchmigrator:3.0.12"
+implementation "com.tonyodev.fetchmigrator:fetchmigrator:3.0.12"
 ```
 Androidx use:
 ```java
