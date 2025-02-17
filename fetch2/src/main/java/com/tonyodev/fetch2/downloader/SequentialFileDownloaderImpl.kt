@@ -9,6 +9,7 @@ import com.tonyodev.fetch2core.*
 import java.io.*
 import java.net.HttpURLConnection
 import kotlin.math.ceil
+import android.util.Log
 
 class SequentialFileDownloaderImpl(private val initialDownload: Download,
                                    private val downloader: Downloader<*, *>,
