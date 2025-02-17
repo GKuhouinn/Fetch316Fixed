@@ -328,7 +328,10 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
 
     private fun getRequest(): Downloader.ServerRequest {
         val headers = initialDownload.headers.toMutableMap()
-        headers["Range"] = "bytes=$downloaded-"
+        //headers["Range"] = "bytes=$downloaded-"
+        headers["Range"] = "bytes=0-8388608"
+        headers["accept-encoding"] = ""
+        Log.d("BackGroundTest", "allready set header in kt getReqyest()")
         return Downloader.ServerRequest(
                 id = initialDownload.id,
                 url = initialDownload.url,
