@@ -71,7 +71,7 @@ ext {
     releaseGroupId = 'com.github.Kuhouinn'
     releaseArtifactId = 'fetchmigrator'
     //releaseVersion = library_version
-    releaseVersion = '3.1.6.9'
+    releaseVersion = '3.1.6.10'
 }
 
 apply from: '../publish_config.gradle'
