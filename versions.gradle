@@ -6,7 +6,7 @@ ext {
     android_support_version = '1.5.1'
     core_version = '1.13.1'
     constraint_layout_version = "2.1.4"
-    room_version = '2.6.1'
+    room_version = '2.5.2'
     junit_version = '4.13.2'
     espresso_version = '3.6.1'
     test_runner_version = '1.6.2'
@@ -21,6 +21,6 @@ ext {
     agp_version = '7.4.2'
     multidex_version = '2.0.1'
 
-    library_version = '3.1.6.22'
+    library_version = '3.1.6.23'
     library_version_code = 83
 }
