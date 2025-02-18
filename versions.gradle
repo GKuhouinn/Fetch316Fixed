@@ -17,6 +17,6 @@ ext {
     rxJava2_version = "2.2.20"
     rxAndroid2_version = "2.1.1"
     timber_version = "4.7.1"
-    library_version = "3.1.6.6"
+    library_version = "3.1.6.7"
     library_version_code = 77
 }
