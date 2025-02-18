@@ -69,7 +69,7 @@ ext {
     releaseGroupId = 'com.github.Kuhouinn'
     releaseArtifactId = 'fetch2core'
     //releaseVersion = library_version
-    releaseVersion = '3.1.6.18'
+    releaseVersion = '3.1.6.19'
 }
 
 apply from: '../publish_config.gradle'
