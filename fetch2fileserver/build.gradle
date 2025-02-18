@@ -74,7 +74,7 @@ ext {
     releaseGroupId = 'com.github.Kuhouinn'
     releaseArtifactId = 'fetch2fileserver'
     //releaseVersion = library_version
-    releaseVersion = '3.1.6.13'
+    releaseVersion = '3.1.6.14'
 }
 
 apply from: '../publish_config.gradle'
