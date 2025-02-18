@@ -78,8 +78,7 @@ ext {
     releaseDescription = 'Fetch is a simple, powerful, customizable file download manager library for Android.'
     releaseGroupId = 'com.github.Kuhouinn'
     releaseArtifactId = 'fetch2'
-    //releaseVersion = library_version
-    releaseVersion = '3.1.6.20'
+    releaseVersion = library_version
 }
 
 apply from: '../publish_config.gradle'
