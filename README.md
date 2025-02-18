@@ -60,7 +60,7 @@ implementation "com.Kuhouinn.fetch2:fetch2:3.0.12"
 ```
 Androidx use:
 ```java
-implementation "androidx.tonyodev.fetch2:xfetch2:3.1.6"
+implementation "androidx.Kuhouinn.fetch2:xfetch2:3.1.6"
 ```
 
 Next, get an instance of Fetch and request a download.
@@ -230,7 +230,7 @@ implementation "com.Kuhouinn.fetch2okhttp:fetch2okhttp:3.0.12"
 ```
 Androidx use:
 ```java
-implementation "androidx.tonyodev.fetch2okhttp:xfetch2okhttp:3.1.6"
+implementation "androidx.Kuhouinn.fetch2okhttp:xfetch2okhttp:3.1.6"
 ```
 
 Set the OkHttp Downloader for Fetch to use.
@@ -256,7 +256,7 @@ implementation "com.Kuhouinn.fetch2rx:fetch2rx:3.0.12"
 ```
 Androidx use:
 ```java
-implementation "androidx.tonyodev.fetch2rx:xfetch2rx:3.1.6"
+implementation "androidx.Kuhouinn.fetch2rx:xfetch2rx:3.1.6"
 ```
 
 RxFetch makes it super easy to enqueue download requests and query downloads using rxJava2 functional methods.
@@ -296,7 +296,7 @@ implementation "com.Kuhouinn.fetch2fileserver:fetch2fileserver:3.0.12"
 ```
 Androidx use: 
 ```java
-implementation "androidx.tonyodev.fetch2fileserver:xfetch2fileserver:3.1.6"
+implementation "androidx.Kuhouinn.fetch2fileserver:xfetch2fileserver:3.1.6"
 ```
 
 Start a FetchFileServer instance and add resource files that it can serve to connected clients.
@@ -409,7 +409,7 @@ implementation "com.Kuhouinn.fetchmigrator:fetchmigrator:3.0.12"
 ```
 Androidx use:
 ```java
-implementation "androidx.tonyodev.fetchmigrator:xfetchmigrator:3.1.6"
+implementation "androidx.Kuhouinn.fetchmigrator:xfetchmigrator:3.1.6"
 ```
 
 Then run the Migrator.

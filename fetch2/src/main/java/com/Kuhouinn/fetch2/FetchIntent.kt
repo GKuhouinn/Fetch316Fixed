@@ -22,7 +22,7 @@ const val NOTIFICATION_ID_INVALID = -1
 
 const val EXTRA_NAMESPACE = "com.Kuhouinn.fetch2.extra.NAMESPACE"
 const val EXTRA_DOWNLOAD_ID = "com.Kuhouinn.fetch2.extra.DOWNLOAD_ID"
-const val EXTRA_DOWNLOAD_NOTIFICATIONS = "con.tonyodev.fetch2.extra.DOWNLOAD_NOTIFICATIONS"
+const val EXTRA_DOWNLOAD_NOTIFICATIONS = "con.Kuhouinn.fetch2.extra.DOWNLOAD_NOTIFICATIONS"
 const val EXTRA_NOTIFICATION_ID = "com.Kuhouinn.fetch2.extra.NOTIFICATION_ID"
 const val EXTRA_NOTIFICATION_GROUP_ID = "com.Kuhouinn.fetch2.extra.NOTIFICATION_GROUP_ID"
 const val EXTRA_ACTION_TYPE = "com.Kuhouinn.fetch2.extra.ACTION_TYPE"

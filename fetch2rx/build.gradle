@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'maven-publish'
 
 buildscript {
@@ -17,13 +15,11 @@ buildscript {
 }
 
 android {
-    compileSdkVersion library_compile_version
+    compileSdk library_compile_version
 
     defaultConfig {
-        minSdkVersion library_min_version
-        targetSdkVersion library_target_version
-        versionCode library_version_code
-        versionName library_version
+        minSdk library_min_version
+        targetSdk library_target_version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -36,18 +32,24 @@ android {
         }
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    namespace 'com.Kuhouinn.fetch2rx'
+    lint {
+        abortOnError false
     }
 }
 
@@ -69,7 +71,8 @@ ext {
     releaseDescription = 'Fetch is a simple, powerful, customizable file download manager library for Android.'
     releaseGroupId = 'com.github.Kuhouinn'
     releaseArtifactId = 'fetch2rx'
-    releaseVersion = library_version
+    //releaseVersion = library_version
+    releaseVersion = '3.1.6.8'
 }
 
 apply from: '../publish_config.gradle'
