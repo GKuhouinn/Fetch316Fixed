@@ -91,7 +91,7 @@ internal class DatabaseHelper constructor(context: Context)
 
     companion object {
         const val VERSION = 2
-        const val DB_NAME = "com_tonyodev_fetch.db"
+        const val DB_NAME = "com_Kuhouinn_fetch.db"
         const val TABLE_NAME = "requests"
         const val COLUMN_ID = "_id"
         const val COLUMN_URL = "_url"
