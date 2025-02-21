@@ -88,21 +88,21 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
                         0
                     }
                     total = response.contentLength
-                    val seekPosition = if (response.code == HttpURLConnection.HTTP_PARTIAL) {
-                        logger.d("FileDownloader resuming Download $download")
-                        downloaded
+                    var seekPosition = if (response.code == HttpURLConnection.HTTP_PARTIAL) {
+                        logger.d("FileDownloader resuming Download.$download downloaded=$downloaded")
+                        initialDownload.seekPosition
                     } else {
                         logger.d("FileDownloader starting Download $download")
-                        0L
+                        initialDownload.seekPosition
                     }
                     downloadInfo.downloaded = downloaded
                     downloadInfo.total = total
                     if (!storageResolver.fileExists(request.file)) {
                         storageResolver.createFile(request.file, initialDownload.enqueueAction == EnqueueAction.INCREMENT_FILE_NAME)
                     }
-                    if (preAllocateFileOnCreation) {
-                        storageResolver.preAllocateFile(request.file, downloadInfo.total)
-                    }
+                    //if (preAllocateFileOnCreation) {
+                    //    storageResolver.preAllocateFile(request.file, downloadInfo.total)
+                    //}
                     outputResourceWrapper = storageResolver.getRequestOutputResourceWrapper(request)
                     outputResourceWrapper.setWriteOffset(seekPosition)
                     if (!interrupted && !terminated) {
@@ -330,8 +330,6 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
     private fun getRequest(): Downloader.ServerRequest {
         val headers = initialDownload.headers.toMutableMap()
         //headers["Range"] = "bytes=$downloaded-"
-        headers["Range"] = "bytes=0-8388608"
-        headers["accept-encoding"] = ""
         Log.d("BackGroundTest", "allready set header in kt getReqyest()")
         return Downloader.ServerRequest(
                 id = initialDownload.id,

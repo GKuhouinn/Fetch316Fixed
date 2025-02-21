@@ -12,6 +12,7 @@ fun Request.toDownloadInfo(downloadInfo: DownloadInfo): DownloadInfo {
     downloadInfo.file = file
     downloadInfo.priority = priority
     downloadInfo.headers = headers.toMap()
+    downloadInfo.seekPosition = seekPosition
     downloadInfo.group = groupId
     downloadInfo.networkType = networkType
     downloadInfo.status = defaultStatus
@@ -37,6 +38,7 @@ fun Download.toDownloadInfo(downloadInfo: DownloadInfo): DownloadInfo {
     downloadInfo.headers = headers.toMap()
     downloadInfo.downloaded = downloaded
     downloadInfo.total = total
+    downloadInfo.seekPosition = seekPosition
     downloadInfo.status = status
     downloadInfo.networkType = networkType
     downloadInfo.error = error

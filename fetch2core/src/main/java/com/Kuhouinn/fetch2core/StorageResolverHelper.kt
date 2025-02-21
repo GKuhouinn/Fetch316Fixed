@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.ParcelFileDescriptor
 import android.provider.DocumentsContract
 import java.io.*
+import android.util.Log;
 
 fun getOutputResourceWrapper(parcelFileDescriptor: ParcelFileDescriptor): OutputResourceWrapper {
     return getOutputResourceWrapper(parcelFileDescriptor.fileDescriptor, parcelFileDescriptor)
@@ -38,6 +39,12 @@ fun getOutputResourceWrapper(fileOutputStream: FileOutputStream,
         }
 
         override fun setWriteOffset(offset: Long) {
+            val fileSize = fileOutputStream.channel.size()
+            if (offset < 0) {
+                Log.e("setWriteOffset", "Download.seekPosition是负数")
+            } else if (offset > fileSize) {
+                Log.e("setWriteOffset", "Download.seekPosition: ($offset) 超过文件大小: ($fileSize)")
+            }
             this.fileOutputStream.channel.position(offset)
         }
 

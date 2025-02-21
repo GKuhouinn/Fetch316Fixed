@@ -58,7 +58,7 @@ open class Request constructor(
 
     override fun toString(): String {
         return "Request(url='$url', file='$file', id=$id, groupId=$groupId, " +
-                "headers=$headers, priority=$priority, networkType=$networkType, tag=$tag)"
+                "headers=$headers, seekPosition=$seekPosition,priority=$priority, networkType=$networkType, tag=$tag)"
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -67,6 +67,7 @@ open class Request constructor(
         parcel.writeLong(identifier)
         parcel.writeInt(groupId)
         parcel.writeSerializable(HashMap(headers))
+        parcel.writeLong(seekPosition)
         parcel.writeInt(priority.value)
         parcel.writeInt(networkType.value)
         parcel.writeString(tag)
@@ -89,6 +90,7 @@ open class Request constructor(
             val identifier = input.readLong()
             val groupId = input.readInt()
             val headers = input.readSerializable() as Map<String, String>
+            val seekPosition = input.readLong()
             val priority = Priority.valueOf(input.readInt())
             val networkType = NetworkType.valueOf(input.readInt())
             val tag = input.readString()
@@ -102,6 +104,7 @@ open class Request constructor(
             headers.forEach {
                 request.addHeader(it.key, it.value)
             }
+            request.seekPosition = seekPosition
             request.priority = priority
             request.networkType = networkType
             request.tag = tag

@@ -48,6 +48,9 @@ open class DownloadInfo : Download {
     @ColumnInfo(name = DownloadDatabase.COLUMN_TOTAL, typeAffinity = ColumnInfo.INTEGER)
     override var total: Long = -1L
 
+    @ColumnInfo(name = "seek_position", typeAffinity = ColumnInfo.INTEGER)
+    override var seekPosition: Long = 0L
+
     @ColumnInfo(name = DownloadDatabase.COLUMN_STATUS, typeAffinity = ColumnInfo.INTEGER)
     override var status: Status = defaultStatus
 
@@ -129,6 +132,7 @@ open class DownloadInfo : Download {
         if (headers != other.headers) return false
         if (downloaded != other.downloaded) return false
         if (total != other.total) return false
+        if (seekPosition != other.seekPosition) return false
         if (status != other.status) return false
         if (error != other.error) return false
         if (networkType != other.networkType) return false
@@ -155,6 +159,7 @@ open class DownloadInfo : Download {
         result = 31 * result + headers.hashCode()
         result = 31 * result + downloaded.hashCode()
         result = 31 * result + total.hashCode()
+        result = 31 * result + seekPosition.hashCode()
         result = 31 * result + status.hashCode()
         result = 31 * result + error.hashCode()
         result = 31 * result + networkType.hashCode()
@@ -183,6 +188,7 @@ open class DownloadInfo : Download {
         dest.writeSerializable(HashMap(headers))
         dest.writeLong(downloaded)
         dest.writeLong(total)
+        dest.writeLong(seekPosition)
         dest.writeInt(status.value)
         dest.writeInt(error.value)
         dest.writeInt(networkType.value)
@@ -205,7 +211,7 @@ open class DownloadInfo : Download {
     override fun toString(): String {
         return "DownloadInfo(id=$id, namespace='$namespace', url='$url', file='$file', " +
                 "group=$group, priority=$priority, headers=$headers, downloaded=$downloaded," +
-                " total=$total, status=$status, error=$error, networkType=$networkType, " +
+                " total=$total, seekPosition=$seekPosition,status=$status, error=$error, networkType=$networkType, " +
                 "created=$created, tag=$tag, enqueueAction=$enqueueAction, identifier=$identifier," +
                 " downloadOnEnqueue=$downloadOnEnqueue, extras=$extras, " +
                 "autoRetryMaxAttempts=$autoRetryMaxAttempts, autoRetryAttempts=$autoRetryAttempts," +
@@ -225,6 +231,7 @@ open class DownloadInfo : Download {
             val headers = source.readSerializable() as Map<String, String>
             val downloaded = source.readLong()
             val total = source.readLong()
+            val seekPosition = source.readLong()
             val status = Status.valueOf(source.readInt())
             val error = Error.valueOf(source.readInt())
             val networkType = NetworkType.valueOf(source.readInt())
@@ -249,6 +256,7 @@ open class DownloadInfo : Download {
             downloadInfo.headers = headers
             downloadInfo.downloaded = downloaded
             downloadInfo.total = total
+            downloadInfo.seekPosition = seekPosition
             downloadInfo.status = status
             downloadInfo.error = error
             downloadInfo.networkType = networkType

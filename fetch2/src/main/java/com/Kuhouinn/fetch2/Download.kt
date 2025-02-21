@@ -45,6 +45,8 @@ interface Download : Parcelable, Serializable {
      * did not readily provide the Content-Length when the connection was established.*/
     val total: Long
 
+    val seekPosition: Long
+
     /** The current status of a download.
      *  @see com.Kuhouinn.fetch2.Status
      *  */

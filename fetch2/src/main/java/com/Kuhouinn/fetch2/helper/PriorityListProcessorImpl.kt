@@ -72,6 +72,7 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
     }
 
     private val priorityIteratorRunnable = Runnable {
+        logger.d("priorityIteratorRunnable")
         if (canContinueToProcess()) {
             if (downloadManager.canAccommodateNewDownload() && canContinueToProcess()) {
                 val priorityList = getPriorityList()

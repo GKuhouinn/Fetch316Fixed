@@ -100,6 +100,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
                             }
                         }
                         if (runDownload) {
+                            logger.d("filedownloader run")
                             fileDownloader.run()
                         }
                         removeDownloadMappings(download)
