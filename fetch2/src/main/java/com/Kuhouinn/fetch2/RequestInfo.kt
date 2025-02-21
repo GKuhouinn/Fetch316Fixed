@@ -22,6 +22,7 @@ open class RequestInfo : Serializable {
      * the server about a request.*/
     val headers: MutableMap<String, String> = mutableMapOf()
 
+    @JvmField
     var seekPosition: Long = 0L
 
     /** The download Priority of this download.
