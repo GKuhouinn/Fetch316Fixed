@@ -72,6 +72,7 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
         try {
             downloaded = initialDownload.downloaded
             total = initialDownload.total
+            logger.d("initialDownload.total $total")
             downloadInfo.downloaded = downloaded
             downloadInfo.total = total
             if (!interrupted && !terminated) {
@@ -87,12 +88,13 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
                     } else {
                         0
                     }
-                    total = response.contentLength
+                    //total = response.contentLength
+                    logger.d("total from response ${response.contentLength}")
                     var seekPosition = if (response.code == HttpURLConnection.HTTP_PARTIAL) {
-                        logger.d("FileDownloader resuming Download.$download downloaded=$downloaded")
+                        logger.d("FileDownloader resuming DownloadInfo.$downloadInfo download $download downloaded=$downloaded")
                         initialDownload.seekPosition
                     } else {
-                        logger.d("FileDownloader starting Download $download")
+                        logger.d("FileDownloader starting DownloadInfo $downloadInfo")
                         initialDownload.seekPosition
                     }
                     downloadInfo.downloaded = downloaded

@@ -22,8 +22,9 @@ open class RequestInfo : Serializable {
      * the server about a request.*/
     val headers: MutableMap<String, String> = mutableMapOf()
 
-    @JvmField
     var seekPosition: Long = 0L
+
+    var totalSize: Long = 0L
 
     /** The download Priority of this download.
      * @see com.Kuhouinn.fetch2.Priority */
@@ -91,6 +92,7 @@ open class RequestInfo : Serializable {
         if (groupId != other.groupId) return false
         if (headers != other.headers) return false
         if (seekPosition != other.seekPosition) return false
+        if (totalSize != other.totalSize) return false
         if (priority != other.priority) return false
         if (networkType != other.networkType) return false
         if (tag != other.tag) return false
@@ -106,6 +108,7 @@ open class RequestInfo : Serializable {
         result = 31 * result + groupId
         result = 31 * result + headers.hashCode()
         result = 31 * result + seekPosition.hashCode()
+        result = 31 * result + totalSize.hashCode()
         result = 31 * result + priority.hashCode()
         result = 31 * result + networkType.hashCode()
         result = 31 * result + (tag?.hashCode() ?: 0)
@@ -118,7 +121,7 @@ open class RequestInfo : Serializable {
 
     override fun toString(): String {
         return "RequestInfo(identifier=$identifier, groupId=$groupId," +
-                " headers=$headers, seekPosition=$seekPosition, priority=$priority, networkType=$networkType," +
+                " headers=$headers, seekPosition=$seekPosition, totalSize=$totalSize, priority=$priority, networkType=$networkType," +
                 " tag=$tag, enqueueAction=$enqueueAction, downloadOnEnqueue=$downloadOnEnqueue, " +
                 "autoRetryMaxAttempts=$autoRetryMaxAttempts, extras=$extras)"
     }
