@@ -27,7 +27,9 @@ enum class EnqueueAction(val value: Int) {
      * Note: If download is existing, Fetch will update the old request/download with the new settings on
      * from the request object.
      * */
-    UPDATE_ACCORDINGLY(3);
+    UPDATE_ACCORDINGLY(3),
+
+    UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE(4);
 
     companion object {
 
@@ -37,6 +39,7 @@ enum class EnqueueAction(val value: Int) {
                 1 -> INCREMENT_FILE_NAME
                 2 -> DO_NOT_ENQUEUE_IF_EXISTING
                 3 -> UPDATE_ACCORDINGLY
+                4 -> UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE
                 else -> REPLACE_EXISTING
             }
         }

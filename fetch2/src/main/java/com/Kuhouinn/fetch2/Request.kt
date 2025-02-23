@@ -58,7 +58,7 @@ open class Request constructor(
 
     override fun toString(): String {
         return "Request(url='$url', file='$file', id=$id, groupId=$groupId, " +
-                "headers=$headers, seekPosition=$seekPosition, totalSize=$totalSize, priority=$priority, networkType=$networkType, tag=$tag)"
+                "headers=$headers, seekPosition=$seekPosition, totalSize=$totalSize, enqueueAction=$enqueueAction, priority=$priority, networkType=$networkType, tag=$tag)"
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

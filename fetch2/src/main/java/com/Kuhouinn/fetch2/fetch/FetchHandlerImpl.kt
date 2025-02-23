@@ -179,6 +179,14 @@ class FetchHandlerImpl(private val namespace: String,
                     false
                 }
             }
+            EnqueueAction.UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE -> {
+                if (existingDownload != null) {
+                    logger.d("prepareDownloadInfoForEnqueue for UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE")
+                    true
+                } else {
+                    false
+                }
+            }
             EnqueueAction.DO_NOT_ENQUEUE_IF_EXISTING -> {
                 if (existingDownload != null) {
                     throw FetchException(REQUEST_WITH_FILE_PATH_ALREADY_EXIST)
