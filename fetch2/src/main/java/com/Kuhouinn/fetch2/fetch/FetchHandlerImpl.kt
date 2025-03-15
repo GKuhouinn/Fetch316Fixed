@@ -13,6 +13,7 @@ import com.Kuhouinn.fetch2.util.*
 import com.Kuhouinn.fetch2core.*
 import java.io.IOException
 import java.util.*
+import android.database.sqlite.SQLiteDatabaseLockedException
 
 /**
  * This handlerWrapper class handles all tasks and operations of Fetch.
@@ -95,21 +96,27 @@ class FetchHandlerImpl(private val namespace: String,
                     }
                     if (!existing) {
                         logger.d("fetchHandleImpl enqueueRequests before insert downloadinfo")
+
                         var success = false
                         var attempts = 0
+                        var downloadPair: Pair<Download, Error>? = null
+                        var lastException: Exception? = null
                         while (!success && attempts < 3) {
                             try {
-                                // 数据库操作代码
-                                val downloadPair = fetchDatabaseManagerWrapper.insert(downloadInfo)
+                                downloadPair = fetchDatabaseManagerWrapper.insert(downloadInfo)
                                 success = true
                             } catch (e: SQLiteDatabaseLockedException) {
                                 attempts++
+                                lastException = e
+                                logger.w("Database is locked when inserting ${downloadInfo.file}, attempt $attempts", e)
                                 Thread.sleep(50)  // 休眠50毫秒后重试
                             }
                         }
                         if (!success) {
-                            throw e  // 达到重试上限后抛出异常
+                            // 重试上限达到，抛出最后一次捕获的异常
+                            throw lastException ?: Exception("Database is locked and unknown error occurred.")
                         }
+                        
                         logger.d("Enqueued download ${downloadPair.first}")
                         results.add(Pair(downloadPair.first, Error.NONE))
                         startPriorityQueueIfNotStarted()
