@@ -130,7 +130,7 @@ open class FetchImpl constructor(override val namespace: String,
                         }
                     }
                     uiHandler.post {
-                        logger.d("fetchimpl iterator func call second = ${it.second}")
+                        logger.d("fetchimpl iterator func call second = $it")
                         func?.call(downloadPairs.map { Pair(it.first.request, it.second) })
                     }
                 } catch (e: Exception) {
