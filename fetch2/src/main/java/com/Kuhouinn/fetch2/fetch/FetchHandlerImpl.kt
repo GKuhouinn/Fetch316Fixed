@@ -86,6 +86,7 @@ class FetchHandlerImpl(private val namespace: String,
             downloadInfo.namespace = namespace
             try {
                 val existing = prepareDownloadInfoForEnqueue(downloadInfo)
+                logger.d("fetchHandleImpl enqueueRequests downloadInfo existing: ${existing} downloadInfo.status: ${downloadInfo.status}")
                 if (downloadInfo.status != Status.COMPLETED) {
                     downloadInfo.status = if (it.downloadOnEnqueue) {
                         Status.QUEUED
@@ -103,6 +104,7 @@ class FetchHandlerImpl(private val namespace: String,
                         results.add(Pair(downloadInfo, Error.NONE))
                     }
                 } else {
+                    logger.d("fetchHandleImpl enqueueRequests return for downloadInfo.status = completed")
                     results.add(Pair(downloadInfo, Error.NONE))
                 }
                 if (prioritySort == PrioritySort.DESC && !downloadManager.canAccommodateNewDownload()) {
@@ -110,6 +112,7 @@ class FetchHandlerImpl(private val namespace: String,
                 }
             } catch (e: Exception) {
                 val error = getErrorFromThrowable(e)
+                logger.d("fetchHandleImpl enqueueRequests return for error ${error} ${e}")
                 error.throwable = e
                 results.add(Pair(downloadInfo, error))
             }
@@ -119,44 +122,75 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     private fun prepareDownloadInfoForEnqueue(downloadInfo: DownloadInfo): Boolean {
+        // 尝试取消已有的同文件下载任务，便于后续操作
+        logger.d("准备enqueue: 开始取消下载任务，文件: ${downloadInfo.file}")
         cancelDownloadsIfDownloading(listOf(downloadInfo))
+        
+        // 从数据库中通过文件路径获取DownloadInfo
         var existingDownload = fetchDatabaseManagerWrapper.getByFile(downloadInfo.file)
+        logger.d("prepareDownloadInfoForEnqueue: 查询数据库，获取文件 ${downloadInfo.file} 的记录: $existingDownload")
+        
         if (existingDownload == null) {
+            logger.d("prepareDownloadInfoForEnqueue: 数据库中不存在文件记录 ${downloadInfo.file}")
             if (downloadInfo.enqueueAction != EnqueueAction.INCREMENT_FILE_NAME) {
                 if (createFileOnEnqueue) {
-                    storageResolver.createFile(downloadInfo.file)
+                    try {
+                        storageResolver.createFile(downloadInfo.file)
+                        logger.d("文件不存在，已创建文件: ${downloadInfo.file}")
+                    } catch (e: Exception) {
+                        logger.e("创建文件 ${downloadInfo.file} 时出错: ${e.message}", e)
+                    }
+                } else {
+                    logger.d("createFileOnEnqueue 为false，不创建文件: ${downloadInfo.file}")
                 }
             }
         } else {
+            logger.d("prepareDownloadInfoForEnqueue: 数据库中已存在文件记录 ${downloadInfo.file}，执行取消操作")
             cancelDownloadsIfDownloading(listOf(existingDownload))
+            // 再次查询确保获取到最新信息
             existingDownload = fetchDatabaseManagerWrapper.getByFile(downloadInfo.file)
+            logger.d("prepareDownloadInfoForEnqueue: 重新查询后得到的记录: $existingDownload")
+            
             if (existingDownload != null && existingDownload.status == Status.DOWNLOADING) {
+                logger.d("文件 ${downloadInfo.file} 当前状态为DOWNLOADING，更新为QUEUED")
                 existingDownload.status = Status.QUEUED
                 try {
                     fetchDatabaseManagerWrapper.update(existingDownload)
+                    logger.d("已更新数据库中 ${downloadInfo.file} 的状态为QUEUED")
                 } catch (e: Exception) {
-                    logger.e(e.message ?: "", e)
+                    logger.e("更新下载记录 ${downloadInfo.file} 状态时出错: ${e.message}", e)
                 }
-            } else if (existingDownload?.status == Status.COMPLETED
-                    && downloadInfo.enqueueAction == EnqueueAction.UPDATE_ACCORDINGLY) {
+            } else if (existingDownload?.status == Status.COMPLETED &&
+                       downloadInfo.enqueueAction == EnqueueAction.UPDATE_ACCORDINGLY) {
+                logger.d("文件 ${downloadInfo.file} 完成下载，但检查到文件可能不在存储中")
                 if (!storageResolver.fileExists(existingDownload.file)) {
+                    logger.e("数据库中记录为已完成但磁盘上缺失文件 ${existingDownload.file}，准备删除数据库记录")
                     try {
                         fetchDatabaseManagerWrapper.delete(existingDownload)
+                        logger.d("已删除不存在的下载记录: ${existingDownload.file}")
                     } catch (e: Exception) {
-                        logger.e(e.message ?: "", e)
+                        logger.e("删除下载记录 ${existingDownload.file} 时出错: ${e.message}", e)
                     }
                     existingDownload = null
                     if (downloadInfo.enqueueAction != EnqueueAction.INCREMENT_FILE_NAME) {
                         if (createFileOnEnqueue) {
-                            storageResolver.createFile(downloadInfo.file)
+                            try {
+                                storageResolver.createFile(downloadInfo.file)
+                                logger.d("重新创建缺失的文件: ${downloadInfo.file}")
+                            } catch (e: Exception) {
+                                logger.e("重新创建文件 ${downloadInfo.file} 时出错: ${e.message}", e)
+                            }
                         }
                     }
                 }
             }
         }
+        
+        // 处理不同的enqueuing策略
         return when (downloadInfo.enqueueAction) {
             EnqueueAction.UPDATE_ACCORDINGLY -> {
                 if (existingDownload != null) {
+                    logger.d("处理UPDATE_ACCORDINGLY: 找到现有记录 ${downloadInfo.file}")
                     downloadInfo.downloaded = existingDownload.downloaded
                     downloadInfo.total = existingDownload.total
                     downloadInfo.error = existingDownload.error
@@ -164,53 +198,76 @@ class FetchHandlerImpl(private val namespace: String,
                     if (downloadInfo.status != Status.COMPLETED) {
                         downloadInfo.status = Status.QUEUED
                         downloadInfo.error = defaultNoError
+                        logger.d("更新状态非COMPLETED，设置状态QUEUED")
                     }
                     if (downloadInfo.status == Status.COMPLETED && !storageResolver.fileExists(downloadInfo.file)) {
+                        logger.e("记录为COMPLETED但文件 ${downloadInfo.file} 不存在于存储中")
                         if (createFileOnEnqueue) {
-                            storageResolver.createFile(downloadInfo.file)
+                            try {
+                                storageResolver.createFile(downloadInfo.file)
+                                logger.d("已重新创建文件 ${downloadInfo.file}")
+                            } catch (e: Exception) {
+                                logger.e("重新创建文件 ${downloadInfo.file} 时出错: ${e.message}", e)
+                            }
                         }
                         downloadInfo.downloaded = 0L
                         downloadInfo.total = -1L
                         downloadInfo.status = Status.QUEUED
                         downloadInfo.error = defaultNoError
+                        logger.d("修改下载记录为QUEUED状态并重置下载进度")
                     }
                     true
                 } else {
+                    logger.d("处理UPDATE_ACCORDINGLY: 未找到现有记录 ${downloadInfo.file}")
                     false
                 }
             }
             EnqueueAction.UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE -> {
                 if (existingDownload != null) {
-                    logger.d("prepareDownloadInfoForEnqueue for UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE")
+                    logger.d("处理UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE: 找到现有记录 ${downloadInfo.file}")
                     true
                 } else {
+                    logger.d("处理UPDATE_ACCORDINGLY_AND_CONTINUE_DOWNLOAD_RANGE: 未找到现有记录 ${downloadInfo.file}")
                     false
                 }
             }
             EnqueueAction.DO_NOT_ENQUEUE_IF_EXISTING -> {
                 if (existingDownload != null) {
+                    logger.e("处理DO_NOT_ENQUEUE_IF_EXISTING: 文件 ${downloadInfo.file} 已存在，抛出异常")
                     throw FetchException(REQUEST_WITH_FILE_PATH_ALREADY_EXIST)
                 } else {
+                    logger.d("处理DO_NOT_ENQUEUE_IF_EXISTING: 文件 ${downloadInfo.file} 未存在")
                     false
                 }
             }
             EnqueueAction.REPLACE_EXISTING -> {
+                logger.d("处理REPLACE_EXISTING: 开始删除现有记录，文件 ${downloadInfo.file}")
                 if (existingDownload != null) {
                     deleteDownloads(listOf(existingDownload))
+                    logger.d("已删除现有下载记录: ${downloadInfo.file}")
                 }
                 deleteDownloads(listOf(downloadInfo))
-                return false
+                logger.d("已删除当前下载信息: ${downloadInfo.file}")
+                false
             }
             EnqueueAction.INCREMENT_FILE_NAME -> {
+                logger.d("处理INCREMENT_FILE_NAME: 对文件 ${downloadInfo.file} 执行增量重命名")
                 if (createFileOnEnqueue) {
-                    storageResolver.createFile(downloadInfo.file, true)
+                    try {
+                        storageResolver.createFile(downloadInfo.file, true)
+                        logger.d("已创建新的文件版本: ${downloadInfo.file}")
+                    } catch (e: Exception) {
+                        logger.e("创建新文件版本 ${downloadInfo.file} 时出错: ${e.message}", e)
+                    }
                 }
+                // 对文件名进行处理，此处根据业务逻辑设定（现有代码中仅为示例赋值）
                 downloadInfo.file = downloadInfo.file
                 downloadInfo.id = getUniqueId(downloadInfo.url, downloadInfo.file)
                 false
             }
         }
     }
+    
 
     override fun enqueueCompletedDownload(completedDownload: CompletedDownload): Download {
         return enqueueCompletedDownloads(listOf(completedDownload)).first()

@@ -67,6 +67,7 @@ open class FetchImpl constructor(override val namespace: String,
 
     override fun enqueue(request: Request, func: Func<Request>?, func2: Func<Error>?): Fetch {
         enqueueRequest(listOf(request), Func { result ->
+            logger.d("fetchimpl enqueue func result = ${result}")
             if (result.isNotEmpty()) {
                 val enqueuedPair = result.first()
                 if (enqueuedPair.second != Error.NONE) {
@@ -97,11 +98,13 @@ open class FetchImpl constructor(override val namespace: String,
             throwExceptionIfClosed()
             handlerWrapper.post {
                 try {
+                    logger.d("fetchimpl enqueueRequest $requests")
                     val distinctCount = requests.distinctBy { it.file }.count()
                     if (distinctCount != requests.size) {
                         throw FetchException(ENQUEUED_REQUESTS_ARE_NOT_DISTINCT)
                     }
                     val downloadPairs = fetchHandler.enqueue(requests)
+                    logger.d("fetchimpl iterator downloadPairs")
                     downloadPairs.forEach { downloadPair ->
                         val download = downloadPair.first
                         when (download.status) {
@@ -122,11 +125,12 @@ open class FetchImpl constructor(override val namespace: String,
                                 logger.d("Completed download $download")
                             }
                             else -> {
-
+                                logger.d("fetchimpl iterator downloadPairs wrong status")
                             }
                         }
                     }
                     uiHandler.post {
+                        logger.d("fetchimpl iterator func call second = ${it.second}")
                         func?.call(downloadPairs.map { Pair(it.first.request, it.second) })
                     }
                 } catch (e: Exception) {
