@@ -94,7 +94,22 @@ class FetchHandlerImpl(private val namespace: String,
                         Status.ADDED
                     }
                     if (!existing) {
-                        val downloadPair = fetchDatabaseManagerWrapper.insert(downloadInfo)
+                        logger.d("fetchHandleImpl enqueueRequests before insert downloadinfo")
+                        var success = false
+                        var attempts = 0
+                        while (!success && attempts < 3) {
+                            try {
+                                // 数据库操作代码
+                                val downloadPair = fetchDatabaseManagerWrapper.insert(downloadInfo)
+                                success = true
+                            } catch (e: SQLiteDatabaseLockedException) {
+                                attempts++
+                                Thread.sleep(50)  // 休眠50毫秒后重试
+                            }
+                        }
+                        if (!success) {
+                            throw e  // 达到重试上限后抛出异常
+                        }
                         logger.d("Enqueued download ${downloadPair.first}")
                         results.add(Pair(downloadPair.first, Error.NONE))
                         startPriorityQueueIfNotStarted()
