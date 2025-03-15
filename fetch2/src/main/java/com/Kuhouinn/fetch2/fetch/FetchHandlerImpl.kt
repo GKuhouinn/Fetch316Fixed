@@ -99,7 +99,7 @@ class FetchHandlerImpl(private val namespace: String,
 
                         var success = false
                         var attempts = 0
-                        var downloadPair: Pair<Download, Error>? = null
+                        var downloadPair: Pair<Download, Boolean>? = null
                         var lastException: Exception? = null
                         while (!success && attempts < 3) {
                             try {
@@ -108,7 +108,7 @@ class FetchHandlerImpl(private val namespace: String,
                             } catch (e: SQLiteDatabaseLockedException) {
                                 attempts++
                                 lastException = e
-                                logger.w("Database is locked when inserting ${downloadInfo.file}, attempt $attempts", e)
+                                logger.d("Database is locked when inserting ${downloadInfo.file}, attempt $attempts", e)
                                 Thread.sleep(50)  // 休眠50毫秒后重试
                             }
                         }
@@ -116,9 +116,9 @@ class FetchHandlerImpl(private val namespace: String,
                             // 重试上限达到，抛出最后一次捕获的异常
                             throw lastException ?: Exception("Database is locked and unknown error occurred.")
                         }
-                        
-                        logger.d("Enqueued download ${downloadPair.first}")
-                        results.add(Pair(downloadPair.first, Error.NONE))
+
+                        logger.d("Enqueued download ${downloadPair!!.first}")
+                        results.add(Pair(downloadPair!!.first, Error.NONE))
                         startPriorityQueueIfNotStarted()
                     } else {
                         fetchDatabaseManagerWrapper.update(downloadInfo)
