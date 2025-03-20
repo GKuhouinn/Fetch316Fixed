@@ -1017,13 +1017,26 @@ interface Fetch {
             }
         }
 
-        /**
-         * Creates a custom Instance of Fetch with the given configuration and namespace.
-         * @param fetchConfiguration custom Fetch Configuration
-         * @return custom Fetch instance
-         * */
+        ///**
+        // * Creates a custom Instance of Fetch with the given configuration and namespace.
+        // * @param fetchConfiguration custom Fetch Configuration
+        // * @return custom Fetch instance
+        // * */
+        //fun getInstance(fetchConfiguration: FetchConfiguration): Fetch {
+        //    return FetchImpl.newInstance(FetchModulesBuilder.buildModulesFromPrefs(fetchConfiguration))
+        //}
+
+        //由于接入了我们的系统导致ueworker会频繁创建，这个fetch也会频繁创建，这里改成单例。
+        @Volatile
+        private var instance: Fetch? = null
+    
+        @JvmStatic
         fun getInstance(fetchConfiguration: FetchConfiguration): Fetch {
-            return FetchImpl.newInstance(FetchModulesBuilder.buildModulesFromPrefs(fetchConfiguration))
+            return instance ?: synchronized(this) {
+                instance ?: FetchImpl.newInstance(FetchModulesBuilder.buildModulesFromPrefs(fetchConfiguration)).also {
+                    instance = it
+                }
+            }
         }
 
     }

@@ -1208,6 +1208,9 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun close() {
+        // 在函数入口处打印堆栈跟踪，用于调试时查看调用链
+        val stackTraceString = Thread.currentThread().stackTrace.joinToString(separator = "\n")
+        logger.d("$namespace: close() called, stack trace:\n$stackTraceString")
         synchronized(lock) {
             if (closed) {
                 return
