@@ -23,3 +23,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+subprojects {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            jvmTarget = project.findProperty("kotlinJvmTarget") ?: "1.8"
+        }
+    }
+}
