@@ -429,8 +429,8 @@ class FetchHandlerImpl(private val namespace: String,
         fetchDatabaseManagerWrapper.delete(downloads)
         downloads.forEach {
             it.status = Status.DELETED
-            storageResolver.deleteFile(it.file)
-            fetchDatabaseManagerWrapper.delegate?.deleteTempFilesForDownload(it)
+            //storageResolver.deleteFile(it.file)
+            //fetchDatabaseManagerWrapper.delegate?.deleteTempFilesForDownload(it)
         }
         return downloads
     }
