@@ -270,16 +270,13 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
                                 download = downloadInfo,
                                 etaInMilliSeconds = downloadInfo.etaInMilliSeconds,
                                 downloadedBytesPerSecond = downloadInfo.downloadedBytesPerSecond)
-                        logger.d("writeToOutput after on progerss $downloaded")
                     }
                     reportingStartTime = System.nanoTime()
                 }
                 if (downloadSpeedCheckTimeElapsed) {
                     downloadSpeedStartTime = System.nanoTime()
                 }
-                logger.d("writeToOutput before read")
                 read = input.read(buffer, 0, bufferSize)
-                logger.d("writeToOutput after read")
             }
         }
         outputResourceWrapper?.flush()
