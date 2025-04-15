@@ -15,6 +15,7 @@ import com.Kuhouinn.fetch2.fetch.ListenerCoordinator
 import com.Kuhouinn.fetch2core.Logger
 import com.Kuhouinn.fetch2core.isFetchFileServerUrl
 import java.util.concurrent.TimeUnit
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerWrapper,
                                             private val downloadProvider: DownloadProvider,

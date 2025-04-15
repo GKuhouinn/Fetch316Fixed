@@ -13,6 +13,7 @@ import com.Kuhouinn.fetch2.util.getRequestForDownload
 import com.Kuhouinn.fetch2core.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
                           concurrentLimit: Int,
