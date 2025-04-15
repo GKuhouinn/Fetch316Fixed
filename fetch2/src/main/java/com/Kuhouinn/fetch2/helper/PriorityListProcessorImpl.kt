@@ -68,7 +68,7 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
 
     init {
         networkInfoProvider.registerNetworkChangeListener(networkChangeListener)
-        context.registerReceiver(priorityBackoffResetReceiver, IntentFilter(ACTION_QUEUE_BACKOFF_RESET))
+        LocalBroadcastManager.getInstance(context).registerReceiver(priorityBackoffResetReceiver, IntentFilter(ACTION_QUEUE_BACKOFF_RESET))
     }
 
     private val priorityIteratorRunnable = Runnable {
@@ -200,14 +200,14 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
         synchronized(lock) {
             val intent = Intent(ACTION_QUEUE_BACKOFF_RESET)
             intent.putExtra(EXTRA_NAMESPACE, namespace)
-            context.sendBroadcast(intent)
+            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
         }
     }
 
     override fun close() {
         synchronized(lock) {
             networkInfoProvider.unregisterNetworkChangeListener(networkChangeListener)
-            context.unregisterReceiver(priorityBackoffResetReceiver)
+            LocalBroadcastManager.getInstance(context).unregisterReceiver(priorityBackoffResetReceiver)
         }
     }
 
