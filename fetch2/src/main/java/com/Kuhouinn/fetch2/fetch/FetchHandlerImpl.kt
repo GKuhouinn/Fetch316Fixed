@@ -375,6 +375,7 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     override fun remove(ids: List<Int>): List<Download> {
+        logger.d("FetchHandlerImpl - remove()")
         return removeDownloads(fetchDatabaseManagerWrapper.get(ids).filterNotNull())
     }
 
@@ -395,6 +396,7 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     private fun removeDownloads(downloads: List<DownloadInfo>): List<Download> {
+        logger.d("FetchHandlerImpl - removeDownloads()")
         cancelDownloadsIfDownloading(downloads)
         fetchDatabaseManagerWrapper.delete(downloads)
         downloads.forEach {
@@ -704,6 +706,7 @@ class FetchHandlerImpl(private val namespace: String,
         isTerminating = true
         synchronized(listenerSet) {
             listenerSet.iterator().forEach {
+                logger.d("FetchHandlerImpl-close()")
                 listenerCoordinator.removeListener(listenerId, it)
             }
             listenerSet.clear()

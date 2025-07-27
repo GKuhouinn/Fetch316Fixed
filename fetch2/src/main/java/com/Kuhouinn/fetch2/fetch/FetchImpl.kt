@@ -386,6 +386,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun remove(ids: List<Int>, func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("FetchImpl - remove()")
         return executeRemoveAction({ fetchHandler.remove(ids) }, func, func2)
     }
 
@@ -1025,6 +1026,7 @@ open class FetchImpl constructor(override val namespace: String,
         synchronized(lock) {
             throwExceptionIfClosed()
             handlerWrapper.post {
+                logger.d("FetchImpl-removeListener()")
                 fetchHandler.removeListener(listener)
             }
             return this
