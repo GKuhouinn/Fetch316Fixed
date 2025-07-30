@@ -469,10 +469,12 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun delete(ids: List<Int>, func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl delete()")
         return executeDeleteAction({ fetchHandler.delete(ids) }, func, func2)
     }
 
     override fun delete(id: Int, func: Func<Download>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl delete()-2")
         return delete(listOf(id), Func { downloads ->
             if (downloads.isNotEmpty()) {
                 func?.call(downloads.first())
@@ -483,6 +485,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun deleteGroup(id: Int, func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl deleteGroup()")
         return executeDeleteAction({ fetchHandler.deleteGroup(id) }, func, func2)
     }
 
@@ -499,6 +502,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun deleteAll(func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl deleteAll()")
         return executeDeleteAction({ fetchHandler.deleteAll() }, func, func2)
     }
 

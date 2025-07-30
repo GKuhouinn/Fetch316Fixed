@@ -3,6 +3,7 @@ package com.Kuhouinn.fetch2.util
 import android.content.Context
 import android.content.Intent
 import com.Kuhouinn.fetch2.*
+import com.Kuhouinn.fetch2core.Logger
 
 fun onDownloadNotificationActionTriggered(context: Context?, intent: Intent?, fetchNotificationManager: FetchNotificationManager) {
     if (context != null && intent != null) {
@@ -14,10 +15,12 @@ fun onDownloadNotificationActionTriggered(context: Context?, intent: Intent?, fe
         val isGroupAction = intent.getBooleanExtra(EXTRA_GROUP_ACTION, false)
         val downloadNotifications = intent.getParcelableArrayListExtra(EXTRA_DOWNLOAD_NOTIFICATIONS)
                 ?: emptyList<DownloadNotification>()
+        val logger: Logger = defaultLogger
         if (!isGroupAction) {
             if (!namespace.isNullOrEmpty() && downloadId != DOWNLOAD_ID_INVALID && actionType != ACTION_TYPE_INVALID) {
                 val fetch = fetchNotificationManager.getFetchInstanceForNamespace(namespace)
                 if (!fetch.isClosed) {
+                    logger.d("onDownloadNotificationActionTriggered if delete()")
                     when (actionType) {
                         ACTION_TYPE_CANCEL -> fetch.cancel(downloadId)
                         ACTION_TYPE_DELETE -> fetch.delete(downloadId)
@@ -39,6 +42,7 @@ fun onDownloadNotificationActionTriggered(context: Context?, intent: Intent?, fe
                     }
                     val fetch = fetchNotificationManager.getFetchInstanceForNamespace(fetchNamespace)
                     if (!fetch.isClosed) {
+                        logger.d("onDownloadNotificationActionTriggered else delete()")
                         when (actionType) {
                             ACTION_TYPE_CANCEL_ALL -> fetch.cancel(downloadIds)
                             ACTION_TYPE_DELETE_ALL -> fetch.delete(downloadIds)

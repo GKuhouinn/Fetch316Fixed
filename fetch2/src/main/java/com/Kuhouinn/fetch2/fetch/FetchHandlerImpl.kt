@@ -518,6 +518,7 @@ class FetchHandlerImpl(private val namespace: String,
                 startPriorityQueueIfNotStarted()
                 return Pair(newDownloadInfo, true)
             } else {
+                logger.d("FetchHandlerImpl - updateRequest()-delete()")
                 delete(listOf(requestId))
                 val enqueuePair = enqueue(newRequest)
                 Pair(enqueuePair.first, enqueuePair.second == Error.NONE)
