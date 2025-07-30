@@ -1,13 +1,13 @@
-package com.Kuhouinn.fetch2rx
+package com.GKuhouinn.fetch2rx
 
 import android.annotation.SuppressLint
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.fetch.FetchModulesBuilder
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_REQUEST_UPDATED
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.fetch.FetchModulesBuilder
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_REQUEST_UPDATED
+import com.GKuhouinn.fetch2core.*
 
 /**
  * A light weight file download manager for Android with Rx features.
@@ -24,7 +24,7 @@ interface RxFetch {
 
     /** The namespace which this instance of fetch operates in. An app can
      * have several instances of Fetch with different namespaces.
-     * @see com.Kuhouinn.fetch2.FetchConfiguration
+     * @see com.GKuhouinn.fetch2.FetchConfiguration
      * */
     val namespace: String
 
@@ -297,7 +297,7 @@ interface RxFetch {
     fun resetAutoRetryAttempts(downloadId: Int, retryDownload: Boolean = true): Convertible<Download?>
 
     /** Updates an existing request.
-     * @see com.Kuhouinn.fetch2.Request for more details.
+     * @see com.GKuhouinn.fetch2.Request for more details.
      * @param requestId Id of existing request/download
      * @param updatedRequest Request object
      * @param notifyListeners If the request is successfully updated notify attached Fetch listeners of the download status. Default true
@@ -358,7 +358,7 @@ interface RxFetch {
 
     /**
      * Gets all downloads with a specific status.
-     * @see com.Kuhouinn.fetch2.Status
+     * @see com.GKuhouinn.fetch2.Status
      * @param status Status to query.
      * @throws FetchException if this instance of Fetch has been closed.
      * @return Convertible with results.
@@ -367,7 +367,7 @@ interface RxFetch {
 
     /**
      * Gets all downloads in a specific group with a specific status.
-     * @see com.Kuhouinn.fetch2.Status
+     * @see com.GKuhouinn.fetch2.Status
      * @param groupId group id to query.
      * @param statuses Statuses to query.
      * @throws FetchException if this instance of Fetch has been closed.
@@ -481,9 +481,9 @@ interface RxFetch {
     /**
      * Overrides each downloads specific network type preference and uses a
      * global network type preference instead.
-     * Use com.Kuhouinn.fetch2.NetworkType.GLOBAL_OFF to disable the global network preference.
-     * The default value is com.Kuhouinn.fetch2.NetworkType.GLOBAL_OFF
-     * @see com.Kuhouinn.fetch2.NetworkType
+     * Use com.GKuhouinn.fetch2.NetworkType.GLOBAL_OFF to disable the global network preference.
+     * The default value is com.GKuhouinn.fetch2.NetworkType.GLOBAL_OFF
+     * @see com.GKuhouinn.fetch2.NetworkType
      * @param networkType The global network type.
      * @throws FetchException if this instance of Fetch has been closed.
      * @return Instance

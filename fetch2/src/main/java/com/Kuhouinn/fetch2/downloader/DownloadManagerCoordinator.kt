@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2.downloader
+package com.GKuhouinn.fetch2.downloader
 
 class DownloadManagerCoordinator(val namespace: String) {
 

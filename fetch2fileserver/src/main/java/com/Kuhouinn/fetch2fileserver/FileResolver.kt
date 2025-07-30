@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
 import android.os.ParcelFileDescriptor
-import com.Kuhouinn.fetch2core.*
-import com.Kuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.server.FileRequest
 import java.io.*
 
 /**

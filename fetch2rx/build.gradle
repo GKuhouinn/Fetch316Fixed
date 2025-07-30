@@ -65,9 +65,9 @@ dependencies {
 }
 
 ext {
-    releaseName = 'Kuhouinn-Fetch3.1.6Fixed'
+    releaseName = 'GKuhouinn-Fetch3.1.6Fixed'
     releaseDescription = 'Fetch is a simple, powerful, customizable file download manager library for Android.'
-    releaseGroupId = 'com.github.Kuhouinn'
+    releaseGroupId = 'com.github.GKuhouinn'
     releaseArtifactId = 'fetch2rx'
     releaseVersion = library_version
 }

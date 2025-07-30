@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2okhttp
+package com.GKuhouinn.fetch2okhttp
 
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 /**
  * This downloader uses a OkHttpClient to perform http requests.
  * You can also pass in your custom okHttpClient for this downloader to use.
- * @see {@link com.Kuhouinn.fetch2core.Downloader}
+ * @see {@link com.GKuhouinn.fetch2core.Downloader}
  * */
 open class OkHttpDownloader @JvmOverloads constructor(
         /** OkHttpClient */

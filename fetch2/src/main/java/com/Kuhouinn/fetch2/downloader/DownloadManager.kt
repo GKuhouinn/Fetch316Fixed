@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2.downloader
+package com.GKuhouinn.fetch2.downloader
 
-import com.Kuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.Download
 import java.io.Closeable
 
 interface DownloadManager : Closeable {

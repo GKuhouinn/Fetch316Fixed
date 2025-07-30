@@ -1,13 +1,13 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.app.Application;
 
-import com.Kuhouinn.fetch2.HttpUrlConnectionDownloader;
-import com.Kuhouinn.fetch2core.Downloader;
-import com.Kuhouinn.fetch2.Fetch;
-import com.Kuhouinn.fetch2.FetchConfiguration;
-import com.Kuhouinn.fetch2okhttp.OkHttpDownloader;
-import com.Kuhouinn.fetch2rx.RxFetch;
+import com.GKuhouinn.fetch2.HttpUrlConnectionDownloader;
+import com.GKuhouinn.fetch2core.Downloader;
+import com.GKuhouinn.fetch2.Fetch;
+import com.GKuhouinn.fetch2.FetchConfiguration;
+import com.GKuhouinn.fetch2okhttp.OkHttpDownloader;
+import com.GKuhouinn.fetch2rx.RxFetch;
 
 import okhttp3.OkHttpClient;
 import timber.log.Timber;

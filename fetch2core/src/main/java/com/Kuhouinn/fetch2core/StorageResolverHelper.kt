@@ -1,6 +1,6 @@
 @file:JvmName("StorageResolverHelper")
 
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 import android.content.ContentResolver
 import android.content.ContentValues

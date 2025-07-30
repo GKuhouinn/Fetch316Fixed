@@ -1,12 +1,12 @@
-package com.Kuhouinn.fetch2fileserver.provider
+package com.GKuhouinn.fetch2fileserver.provider
 
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.FileResource
-import com.Kuhouinn.fetch2core.InputResourceWrapper
-import com.Kuhouinn.fetch2core.server.FileRequest
-import com.Kuhouinn.fetch2core.InterruptMonitor
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfo
-import com.Kuhouinn.fetch2core.server.FileResourceTransporterWriter
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.FileResource
+import com.GKuhouinn.fetch2core.InputResourceWrapper
+import com.GKuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.InterruptMonitor
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfo
+import com.GKuhouinn.fetch2core.server.FileResourceTransporterWriter
 import java.util.*
 
 interface FileResourceProviderDelegate {

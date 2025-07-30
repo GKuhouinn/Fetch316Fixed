@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2.helper
+package com.GKuhouinn.fetch2.helper
 
-import com.Kuhouinn.fetch2.NetworkType
+import com.GKuhouinn.fetch2.NetworkType
 import java.io.Closeable
 
 

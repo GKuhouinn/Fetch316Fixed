@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 class AverageCalculator @JvmOverloads constructor(
         /**

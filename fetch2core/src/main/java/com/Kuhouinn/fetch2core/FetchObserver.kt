@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 /**
  * Fetch observers listen for data changes on Objects that are produced by Fetch.

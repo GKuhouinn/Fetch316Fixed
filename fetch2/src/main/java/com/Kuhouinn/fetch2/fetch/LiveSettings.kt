@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
 class LiveSettings(val namespace: String) {
 

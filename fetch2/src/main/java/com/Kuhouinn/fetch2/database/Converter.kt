@@ -1,12 +1,12 @@
-package com.Kuhouinn.fetch2.database
+package com.GKuhouinn.fetch2.database
 
 import androidx.room.TypeConverter
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.util.EMPTY_JSON_OBJECT_STRING
-import com.Kuhouinn.fetch2.NetworkType
-import com.Kuhouinn.fetch2.Priority
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.util.EMPTY_JSON_OBJECT_STRING
+import com.GKuhouinn.fetch2.NetworkType
+import com.GKuhouinn.fetch2.Priority
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2core.Extras
 import org.json.JSONObject
 
 class Converter {

@@ -1,16 +1,16 @@
-package com.Kuhouinn.fetch2.downloader
+package com.GKuhouinn.fetch2.downloader
 
 import android.content.Context
 import android.content.Intent
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.helper.DownloadInfoUpdater
-import com.Kuhouinn.fetch2.helper.FileDownloaderDelegate
-import com.Kuhouinn.fetch2.fetch.ListenerCoordinator
-import com.Kuhouinn.fetch2.provider.GroupInfoProvider
-import com.Kuhouinn.fetch2.provider.NetworkInfoProvider
-import com.Kuhouinn.fetch2.util.getRequestForDownload
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.helper.DownloadInfoUpdater
+import com.GKuhouinn.fetch2.helper.FileDownloaderDelegate
+import com.GKuhouinn.fetch2.fetch.ListenerCoordinator
+import com.GKuhouinn.fetch2.provider.GroupInfoProvider
+import com.GKuhouinn.fetch2.provider.NetworkInfoProvider
+import com.GKuhouinn.fetch2.util.getRequestForDownload
+import com.GKuhouinn.fetch2core.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import androidx.localbroadcastmanager.content.LocalBroadcastManager

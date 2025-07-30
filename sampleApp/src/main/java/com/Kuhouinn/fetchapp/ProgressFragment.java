@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.Kuhouinn.fetch2.Download;
-import com.Kuhouinn.fetch2core.FetchObserver;
-import com.Kuhouinn.fetch2core.Reason;
+import com.GKuhouinn.fetch2.Download;
+import com.GKuhouinn.fetch2core.FetchObserver;
+import com.GKuhouinn.fetch2core.Reason;
 
 import org.jetbrains.annotations.NotNull;
 

@@ -1,17 +1,17 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
 
 import android.os.Handler
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.getErrorFromMessage
-import com.Kuhouinn.fetch2.fetch.FetchModulesBuilder.Modules
-import com.Kuhouinn.fetch2.util.ActiveDownloadInfo
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_AUTOSTART_ON_ATTACHED
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
-import com.Kuhouinn.fetch2.util.toDownloadInfo
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.getErrorFromMessage
+import com.GKuhouinn.fetch2.fetch.FetchModulesBuilder.Modules
+import com.GKuhouinn.fetch2.util.ActiveDownloadInfo
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_AUTOSTART_ON_ATTACHED
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
+import com.GKuhouinn.fetch2.util.toDownloadInfo
+import com.GKuhouinn.fetch2core.*
 
 open class FetchImpl constructor(override val namespace: String,
                                  final override val fetchConfiguration: FetchConfiguration,
@@ -1242,7 +1242,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun awaitFinishOrTimeout(allowTimeInMilliseconds: Long) {
-        com.Kuhouinn.fetch2.util.awaitFinishOrTimeout(allowTimeInMilliseconds, fetchHandler)
+        com.GKuhouinn.fetch2.util.awaitFinishOrTimeout(allowTimeInMilliseconds, fetchHandler)
     }
 
     override fun awaitFinish() {

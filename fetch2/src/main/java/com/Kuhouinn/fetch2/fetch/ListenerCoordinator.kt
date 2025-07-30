@@ -1,13 +1,13 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
 import android.os.Handler
 import android.os.HandlerThread
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.provider.DownloadProvider
-import com.Kuhouinn.fetch2.provider.GroupInfoProvider
-import com.Kuhouinn.fetch2core.DownloadBlock
-import com.Kuhouinn.fetch2core.FetchObserver
-import com.Kuhouinn.fetch2core.Reason
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.provider.DownloadProvider
+import com.GKuhouinn.fetch2.provider.GroupInfoProvider
+import com.GKuhouinn.fetch2core.DownloadBlock
+import com.GKuhouinn.fetch2core.FetchObserver
+import com.GKuhouinn.fetch2core.Reason
 import java.lang.ref.WeakReference
 
 class ListenerCoordinator(val namespace: String,

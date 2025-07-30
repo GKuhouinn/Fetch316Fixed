@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp
+package com.GKuhouinn.fetchapp
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.Kuhouinn.fetchapp", appContext.packageName)
+        assertEquals("com.GKuhouinn.fetchapp", appContext.packageName)
     }
 }

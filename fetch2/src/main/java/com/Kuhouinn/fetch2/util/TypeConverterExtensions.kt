@@ -1,10 +1,10 @@
 @file:JvmName("FetchTypeConverterExtensions")
 
-package com.Kuhouinn.fetch2.util
+package com.GKuhouinn.fetch2.util
 
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2core.getUniqueId
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2core.getUniqueId
 
 fun Request.toDownloadInfo(downloadInfo: DownloadInfo): DownloadInfo {
     downloadInfo.id = id

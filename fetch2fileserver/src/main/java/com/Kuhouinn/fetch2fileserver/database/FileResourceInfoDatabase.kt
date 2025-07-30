@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2fileserver.database
+package com.GKuhouinn.fetch2fileserver.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.DATABASE_VERSION
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.DATABASE_VERSION
 
 @Database(entities = [FileResourceInfo::class], version = DATABASE_VERSION, exportSchema = false)
 abstract class FileResourceInfoDatabase : RoomDatabase() {

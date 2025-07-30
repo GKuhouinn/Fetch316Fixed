@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 /**
  * Used to dictate the order in which Fetch processes request/downloads

@@ -1,24 +1,24 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
 import android.os.Handler
 import android.os.Looper
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.FetchConfiguration
-import com.Kuhouinn.fetch2.database.*
-import com.Kuhouinn.fetch2.downloader.DownloadManager
-import com.Kuhouinn.fetch2.downloader.DownloadManagerCoordinator
-import com.Kuhouinn.fetch2.downloader.DownloadManagerImpl
-import com.Kuhouinn.fetch2.helper.DownloadInfoUpdater
-import com.Kuhouinn.fetch2.helper.PriorityListProcessor
-import com.Kuhouinn.fetch2.helper.PriorityListProcessorImpl
-import com.Kuhouinn.fetch2.provider.DownloadProvider
-import com.Kuhouinn.fetch2.provider.GroupInfoProvider
-import com.Kuhouinn.fetch2.provider.NetworkInfoProvider
-import com.Kuhouinn.fetch2.util.deleteAllInFolderForId
-import com.Kuhouinn.fetch2.util.getRequestForDownload
-import com.Kuhouinn.fetch2core.DefaultStorageResolver
-import com.Kuhouinn.fetch2core.HandlerWrapper
-import com.Kuhouinn.fetch2core.getFileTempDir
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.FetchConfiguration
+import com.GKuhouinn.fetch2.database.*
+import com.GKuhouinn.fetch2.downloader.DownloadManager
+import com.GKuhouinn.fetch2.downloader.DownloadManagerCoordinator
+import com.GKuhouinn.fetch2.downloader.DownloadManagerImpl
+import com.GKuhouinn.fetch2.helper.DownloadInfoUpdater
+import com.GKuhouinn.fetch2.helper.PriorityListProcessor
+import com.GKuhouinn.fetch2.helper.PriorityListProcessorImpl
+import com.GKuhouinn.fetch2.provider.DownloadProvider
+import com.GKuhouinn.fetch2.provider.GroupInfoProvider
+import com.GKuhouinn.fetch2.provider.NetworkInfoProvider
+import com.GKuhouinn.fetch2.util.deleteAllInFolderForId
+import com.GKuhouinn.fetch2.util.getRequestForDownload
+import com.GKuhouinn.fetch2core.DefaultStorageResolver
+import com.GKuhouinn.fetch2core.HandlerWrapper
+import com.GKuhouinn.fetch2core.getFileTempDir
 
 object FetchModulesBuilder {
 

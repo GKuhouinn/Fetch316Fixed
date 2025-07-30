@@ -1,8 +1,8 @@
 @file:JvmName("OkHttpUtils")
 
-package com.Kuhouinn.fetch2okhttp
+package com.GKuhouinn.fetch2okhttp
 
-import com.Kuhouinn.fetch2core.getDefaultCookieManager
+import com.GKuhouinn.fetch2core.getDefaultCookieManager
 import okhttp3.CookieJar
 import okhttp3.JavaNetCookieJar
 

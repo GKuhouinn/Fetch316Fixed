@@ -1,8 +1,8 @@
 @file:JvmName("FetchIntent")
 
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-const val ACTION_QUEUE_BACKOFF_RESET = "com.Kuhouinn.fetch2.action.QUEUE_BACKOFF_RESET"
+const val ACTION_QUEUE_BACKOFF_RESET = "com.GKuhouinn.fetch2.action.QUEUE_BACKOFF_RESET"
 
 const val ACTION_TYPE_INVALID = -1
 const val ACTION_TYPE_PAUSE = 0
@@ -20,10 +20,10 @@ const val DOWNLOAD_ID_INVALID = -1
 const val NOTIFICATION_GROUP_ID_INVALID = -1
 const val NOTIFICATION_ID_INVALID = -1
 
-const val EXTRA_NAMESPACE = "com.Kuhouinn.fetch2.extra.NAMESPACE"
-const val EXTRA_DOWNLOAD_ID = "com.Kuhouinn.fetch2.extra.DOWNLOAD_ID"
-const val EXTRA_DOWNLOAD_NOTIFICATIONS = "con.Kuhouinn.fetch2.extra.DOWNLOAD_NOTIFICATIONS"
-const val EXTRA_NOTIFICATION_ID = "com.Kuhouinn.fetch2.extra.NOTIFICATION_ID"
-const val EXTRA_NOTIFICATION_GROUP_ID = "com.Kuhouinn.fetch2.extra.NOTIFICATION_GROUP_ID"
-const val EXTRA_ACTION_TYPE = "com.Kuhouinn.fetch2.extra.ACTION_TYPE"
-const val EXTRA_GROUP_ACTION = "com.Kuhouinn.fetch2.extra.GROUP_ACTION"
+const val EXTRA_NAMESPACE = "com.GKuhouinn.fetch2.extra.NAMESPACE"
+const val EXTRA_DOWNLOAD_ID = "com.GKuhouinn.fetch2.extra.DOWNLOAD_ID"
+const val EXTRA_DOWNLOAD_NOTIFICATIONS = "con.GKuhouinn.fetch2.extra.DOWNLOAD_NOTIFICATIONS"
+const val EXTRA_NOTIFICATION_ID = "com.GKuhouinn.fetch2.extra.NOTIFICATION_ID"
+const val EXTRA_NOTIFICATION_GROUP_ID = "com.GKuhouinn.fetch2.extra.NOTIFICATION_GROUP_ID"
+const val EXTRA_ACTION_TYPE = "com.GKuhouinn.fetch2.extra.ACTION_TYPE"
+const val EXTRA_GROUP_ACTION = "com.GKuhouinn.fetch2.extra.GROUP_ACTION"

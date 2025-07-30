@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2.helper
+package com.GKuhouinn.fetch2.helper
 
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
 
 
 class DownloadInfoUpdater(private val fetchDatabaseManagerWrapper: FetchDatabaseManagerWrapper) {

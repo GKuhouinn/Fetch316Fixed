@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 /**
  * Action used by Fetch when enqueuing a request and a previous request with the

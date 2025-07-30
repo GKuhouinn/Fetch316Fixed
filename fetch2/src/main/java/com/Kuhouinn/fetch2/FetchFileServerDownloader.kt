@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 
-import com.Kuhouinn.fetch2core.server.FileRequest.CREATOR.TYPE_FILE
-import com.Kuhouinn.fetch2core.server.FetchFileResourceTransporter
-import com.Kuhouinn.fetch2core.server.FileRequest
-import com.Kuhouinn.fetch2core.server.FileResponse
+import com.GKuhouinn.fetch2core.server.FileRequest.CREATOR.TYPE_FILE
+import com.GKuhouinn.fetch2core.server.FetchFileResourceTransporter
+import com.GKuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FileResponse
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.InputStreamReader
@@ -17,7 +17,7 @@ import java.util.*
 /**
  * This downloader is used by Fetch to download files from a Fetch File Server using the
  * Fetch file server url scheme.
- * @see {@link com.Kuhouinn.fetch2core.Downloader}
+ * @see {@link com.GKuhouinn.fetch2core.Downloader}
  * */
 open class FetchFileServerDownloader @JvmOverloads constructor(
 

@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.Downloader
+import com.GKuhouinn.fetch2core.Downloader
 
 /**
  * Enumeration which contains specific errors that can occur.

@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2.provider
+package com.GKuhouinn.fetch2.provider
 
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.FetchGroup
-import com.Kuhouinn.fetch2.model.FetchGroupInfo
-import com.Kuhouinn.fetch2core.Reason
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.FetchGroup
+import com.GKuhouinn.fetch2.model.FetchGroupInfo
+import com.GKuhouinn.fetch2core.Reason
 import java.lang.ref.WeakReference
 
 class GroupInfoProvider(private val namespace: String,

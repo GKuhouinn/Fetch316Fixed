@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2.util
+package com.GKuhouinn.fetch2.util
 
-import com.Kuhouinn.fetch2core.FetchObserver
+import com.GKuhouinn.fetch2core.FetchObserver
 
 class ActiveDownloadInfo(val fetchObserver: FetchObserver<Boolean>,
                          val includeAddedDownloads: Boolean) {

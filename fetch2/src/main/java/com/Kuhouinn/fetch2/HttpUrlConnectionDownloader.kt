@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 import java.io.InputStream
 import java.net.CookieHandler
 import java.net.HttpURLConnection
@@ -11,13 +11,13 @@ import kotlin.collections.HashMap
 /**
  * The default Downloader used by Fetch for downloading requests.
  * This downloader uses a HttpUrlConnection to perform http requests
- * @see {@link com.Kuhouinn.fetch2core.Downloader}
+ * @see {@link com.GKuhouinn.fetch2core.Downloader}
  * */
 open class HttpUrlConnectionDownloader @JvmOverloads constructor(
         /**
          * HttpUrlConnectionPreferences to set preference settings for the
          * HttpUrlConnectionDownloader HttpUrlConnection client.
-         * @see com.Kuhouinn.fetch2.HttpUrlConnectionDownloader.HttpUrlConnectionPreferences
+         * @see com.GKuhouinn.fetch2.HttpUrlConnectionDownloader.HttpUrlConnectionPreferences
          * */
         httpUrlConnectionPreferences: HttpUrlConnectionPreferences? = null,
         /** The file downloader type used to download a request.

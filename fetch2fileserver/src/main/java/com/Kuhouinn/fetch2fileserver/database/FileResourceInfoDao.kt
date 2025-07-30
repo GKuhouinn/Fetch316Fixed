@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2fileserver.database
+package com.GKuhouinn.fetch2fileserver.database
 
 import androidx.room.*
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.COLUMN_ID
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.COLUMN_NAME
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.TABLE_NAME
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.COLUMN_ID
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.COLUMN_NAME
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfoDatabase.Companion.TABLE_NAME
 
 @Dao
 interface FileResourceInfoDao {

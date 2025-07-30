@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 import android.net.Uri
 import android.os.Parcel
 import android.os.Parcelable
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.getFileUri
-import com.Kuhouinn.fetch2core.getUniqueId
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.getFileUri
+import com.GKuhouinn.fetch2core.getUniqueId
 import java.io.Serializable
 
 /**

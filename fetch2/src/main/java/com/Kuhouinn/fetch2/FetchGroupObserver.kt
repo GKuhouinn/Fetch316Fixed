@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.FetchObserver
-import com.Kuhouinn.fetch2core.Reason
+import com.GKuhouinn.fetch2core.FetchObserver
+import com.GKuhouinn.fetch2core.Reason
 
 /**
  * Fetch observer for groups. This observer also specifies which download

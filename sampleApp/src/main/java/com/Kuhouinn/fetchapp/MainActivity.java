@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.Intent;
@@ -13,10 +13,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.Kuhouinn.fetch2.Fetch;
-import com.Kuhouinn.fetch2.FetchConfiguration;
-import com.Kuhouinn.fetch2fileserver.FetchFileServer;
-import com.Kuhouinn.fetch2rx.RxFetch;
+import com.GKuhouinn.fetch2.Fetch;
+import com.GKuhouinn.fetch2.FetchConfiguration;
+import com.GKuhouinn.fetch2fileserver.FetchFileServer;
+import com.GKuhouinn.fetch2rx.RxFetch;
 
 import java.io.File;
 

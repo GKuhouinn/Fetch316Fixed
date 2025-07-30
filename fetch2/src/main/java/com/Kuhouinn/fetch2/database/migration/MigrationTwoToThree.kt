@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2.database.migration
+package com.GKuhouinn.fetch2.database.migration
 
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.Kuhouinn.fetch2.EnqueueAction
-import com.Kuhouinn.fetch2.database.DownloadDatabase
+import com.GKuhouinn.fetch2.EnqueueAction
+import com.GKuhouinn.fetch2.database.DownloadDatabase
 
 class MigrationTwoToThree : Migration(2, 3) {
 

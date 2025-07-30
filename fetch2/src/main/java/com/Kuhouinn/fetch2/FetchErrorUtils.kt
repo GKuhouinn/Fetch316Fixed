@@ -1,8 +1,8 @@
 @file:JvmName("FetchErrorUtils")
 
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 import java.io.IOException
 import java.net.SocketTimeoutException
 

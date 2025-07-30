@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.FetchObserver
+import com.GKuhouinn.fetch2core.FetchObserver
 
 /**
  * An immutable object which contains a current snapshot of all the information

@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2fileserver;
+package com.GKuhouinn.fetch2fileserver;
 
 import org.junit.Test;
 

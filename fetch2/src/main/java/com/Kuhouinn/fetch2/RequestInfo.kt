@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2.util.*
-import com.Kuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2.util.*
+import com.GKuhouinn.fetch2core.Extras
 import java.io.Serializable
 
 /**
@@ -27,11 +27,11 @@ open class RequestInfo : Serializable {
     var totalSize: Long = 0L
 
     /** The download Priority of this download.
-     * @see com.Kuhouinn.fetch2.Priority */
+     * @see com.GKuhouinn.fetch2.Priority */
     var priority: Priority = defaultPriority
 
     /** The network type this download is allowed to download on.
-     * @see com.Kuhouinn.fetch2.NetworkType*/
+     * @see com.GKuhouinn.fetch2.NetworkType*/
     var networkType: NetworkType = defaultNetworkType
 
     /** Adds a header for the download.

@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchmigrator.fetch1
+package com.GKuhouinn.fetchmigrator.fetch1
 
 import android.content.Context
 import android.database.Cursor

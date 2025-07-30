@@ -373,7 +373,7 @@ Big thanks to @duncanokeyo on Github for continuously pointing out issues and im
 - Parallel downloader has been improved.
 - Many fixes when more that one fetch instances share the same namespace.
 - Download status reporting fixes.
-- FetchFileServerDownloader class now moved into package com.Kuhouinn.fetch2
+- FetchFileServerDownloader class now moved into package com.GKuhouinn.fetch2
 - Fetch action methods(pause, resume, retry, etc) now return the proper error when the action fails. Use action methods with callback params.
 - HttpUrlConnectionDownloader, OkHttpDownloader, FetchFileServerDownloader improvements
 - General error reporting improvements.
@@ -464,8 +464,8 @@ version of Fetch is the release of the FetchFileServer. See demo in sample app. 
 over the coming days.
 
 Changes:
-- Logger, Downloader, Func, Func2 and FetchLogger classes moved to com.Kuhouinn.fetch2core
-- OkHttpDownloader class moved to com.Kuhouinn.fetch2okhttp. Add this dependency implementation "com.Kuhouinn.fetch2okhttp:fetch2okhttp:2.1.0-RC1" to your build.gradle file. 
+- Logger, Downloader, Func, Func2 and FetchLogger classes moved to com.GKuhouinn.fetch2core
+- OkHttpDownloader class moved to com.GKuhouinn.fetch2okhttp. Add this dependency implementation "com.GKuhouinn.fetch2okhttp:fetch2okhttp:2.1.0-RC1" to your build.gradle file. 
 - Fetch.Builder and RxFetch.Builder classes has been removed and is replaced with FetchConfiguration.Builder.
 - To get an instance of Fetch call Fetch.Impl.getInstance(fetchConfiguration)
   or RxFetch.Impl.getInstance(fetchConfiguration) to get a new instance.
@@ -503,10 +503,10 @@ FetchFileServer
   added in the coming days.
 - To download files from a FetchFileServer using Fetch, set a custom file server downloader on the
   FetchConfiguration.Builder class by calling the setFileServerDownloader(fileServerDownloader) method.
-  The com.Kuhouinn.fetch2downloads package already contains a custom downloader called
+  The com.GKuhouinn.fetch2downloads package already contains a custom downloader called
   FetchFileServerDownloader that you can use and extend.
 - You can also use the FetchFileServer without having to use Fetch to download files hosted by the
-  file server. See the FetchFileResourceDownloadTask class inside the com.Kuhouinn.fetch2downloads
+  file server. See the FetchFileResourceDownloadTask class inside the com.GKuhouinn.fetch2downloads
   package for more details.
 
 Version 2.0.0-RC22

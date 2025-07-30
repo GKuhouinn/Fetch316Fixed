@@ -1,12 +1,12 @@
-package com.Kuhouinn.fetch2.helper
+package com.GKuhouinn.fetch2.helper
 
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.downloader.FileDownloader
-import com.Kuhouinn.fetch2.util.defaultNoError
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.util.DEFAULT_GLOBAL_AUTO_RETRY_ATTEMPTS
-import com.Kuhouinn.fetch2core.DownloadBlock
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.downloader.FileDownloader
+import com.GKuhouinn.fetch2.util.defaultNoError
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.util.DEFAULT_GLOBAL_AUTO_RETRY_ATTEMPTS
+import com.GKuhouinn.fetch2core.DownloadBlock
 
 
 class FileDownloaderDelegate(private val downloadInfoUpdater: DownloadInfoUpdater,

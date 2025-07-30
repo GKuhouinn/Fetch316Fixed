@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 import                                                                                                                                                                                                                                           android.annotation.SuppressLint
 import android.app.*
@@ -10,10 +10,10 @@ import android.net.Uri
 import android.os.Build
 import androidx.core.app.NotificationCompat
 
-import com.Kuhouinn.fetch2.DownloadNotification.ActionType.*
-import com.Kuhouinn.fetch2.util.DEFAULT_NOTIFICATION_TIMEOUT_AFTER
-import com.Kuhouinn.fetch2.util.DEFAULT_NOTIFICATION_TIMEOUT_AFTER_RESET
-import com.Kuhouinn.fetch2.util.onDownloadNotificationActionTriggered
+import com.GKuhouinn.fetch2.DownloadNotification.ActionType.*
+import com.GKuhouinn.fetch2.util.DEFAULT_NOTIFICATION_TIMEOUT_AFTER
+import com.GKuhouinn.fetch2.util.DEFAULT_NOTIFICATION_TIMEOUT_AFTER_RESET
+import com.GKuhouinn.fetch2.util.onDownloadNotificationActionTriggered
 
 /**
  * The default notification manager class for Fetch. This manager supports both single

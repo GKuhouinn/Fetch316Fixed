@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 /**
  * Enumeration which contains the different network types

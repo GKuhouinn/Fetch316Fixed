@@ -1,17 +1,17 @@
-package com.Kuhouinn.fetchmigrator.helpers
+package com.GKuhouinn.fetchmigrator.helpers
 
 import android.database.Cursor
-import com.Kuhouinn.fetch2.EnqueueAction
-import com.Kuhouinn.fetch2.Error
-import com.Kuhouinn.fetch2.Priority
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
-import com.Kuhouinn.fetch2.util.DEFAULT_DOWNLOAD_ON_ENQUEUE
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetchmigrator.fetch1.DatabaseHelper
-import com.Kuhouinn.fetchmigrator.fetch1.DownloadTransferPair
-import com.Kuhouinn.fetchmigrator.fetch1.FetchConst
+import com.GKuhouinn.fetch2.EnqueueAction
+import com.GKuhouinn.fetch2.Error
+import com.GKuhouinn.fetch2.Priority
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.util.DEFAULT_DOWNLOAD_ON_ENQUEUE
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetchmigrator.fetch1.DatabaseHelper
+import com.GKuhouinn.fetchmigrator.fetch1.DownloadTransferPair
+import com.GKuhouinn.fetchmigrator.fetch1.FetchConst
 import org.json.JSONObject
 
 fun v1CursorToV2DownloadInfo(cursor: Cursor, databaseManagerWrapper: FetchDatabaseManagerWrapper): DownloadTransferPair {

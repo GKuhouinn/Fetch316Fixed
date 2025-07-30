@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2rx
+package com.GKuhouinn.fetch2rx
 
 import io.reactivex.Flowable
 import io.reactivex.Observable

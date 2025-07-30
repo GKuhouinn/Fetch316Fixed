@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
-import com.Kuhouinn.fetch2core.FetchLogger
+import com.GKuhouinn.fetch2core.FetchLogger
 
 
 /** Fetch File Server Default Logger*/

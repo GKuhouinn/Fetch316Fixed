@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
-import com.Kuhouinn.fetch2core.server.FetchFileResourceTransporter
-import com.Kuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FetchFileResourceTransporter
+import com.GKuhouinn.fetch2core.server.FileRequest
 import java.net.InetSocketAddress
 
 interface FileServerDownloader : Downloader<FetchFileResourceTransporter, FileServerDownloader.TransporterRequest> {

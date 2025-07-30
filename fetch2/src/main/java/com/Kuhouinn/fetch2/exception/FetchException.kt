@@ -1,3 +1,3 @@
-package com.Kuhouinn.fetch2.exception
+package com.GKuhouinn.fetch2.exception
 
 open class FetchException constructor(message: String) : RuntimeException(message)

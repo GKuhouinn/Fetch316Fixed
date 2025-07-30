@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2.provider
+package com.GKuhouinn.fetch2.provider
 
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.PrioritySort
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.PrioritySort
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
 
 
 class DownloadProvider(private val fetchDatabaseManagerWrapper: FetchDatabaseManagerWrapper) {

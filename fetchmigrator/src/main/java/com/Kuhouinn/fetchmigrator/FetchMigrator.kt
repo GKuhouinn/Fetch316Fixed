@@ -1,21 +1,21 @@
 @file:JvmName("FetchMigrator")
 
-package com.Kuhouinn.fetchmigrator
+package com.GKuhouinn.fetchmigrator
 
 import android.content.Context
 import android.database.sqlite.SQLiteConstraintException
 import androidx.annotation.WorkerThread
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerImpl
-import com.Kuhouinn.fetch2.database.DownloadDatabase
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
-import com.Kuhouinn.fetch2.fetch.LiveSettings
-import com.Kuhouinn.fetch2core.FetchLogger
-import com.Kuhouinn.fetch2core.DefaultStorageResolver
-import com.Kuhouinn.fetch2core.getFileTempDir
-import com.Kuhouinn.fetchmigrator.fetch1.DatabaseHelper
-import com.Kuhouinn.fetchmigrator.fetch1.DownloadTransferPair
-import com.Kuhouinn.fetchmigrator.helpers.v1CursorToV2DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerImpl
+import com.GKuhouinn.fetch2.database.DownloadDatabase
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.fetch.LiveSettings
+import com.GKuhouinn.fetch2core.FetchLogger
+import com.GKuhouinn.fetch2core.DefaultStorageResolver
+import com.GKuhouinn.fetch2core.getFileTempDir
+import com.GKuhouinn.fetchmigrator.fetch1.DatabaseHelper
+import com.GKuhouinn.fetchmigrator.fetch1.DownloadTransferPair
+import com.GKuhouinn.fetchmigrator.helpers.v1CursorToV2DownloadInfo
 
 import java.sql.SQLException
 

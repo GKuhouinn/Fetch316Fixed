@@ -1,16 +1,16 @@
-package com.Kuhouinn.fetch2.database
+package com.GKuhouinn.fetch2.database
 
 import androidx.room.*
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_CREATED
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_FILE
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_GROUP
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_ID
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_IDENTIFIER
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_PRIORITY
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_STATUS
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_TAG
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.TABLE_NAME
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_CREATED
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_FILE
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_GROUP
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_ID
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_IDENTIFIER
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_PRIORITY
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_STATUS
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.COLUMN_TAG
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.TABLE_NAME
 
 
 @Dao

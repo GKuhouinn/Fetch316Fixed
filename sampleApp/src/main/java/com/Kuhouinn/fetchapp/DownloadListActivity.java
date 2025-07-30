@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,17 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.SwitchCompat;
 import android.view.View;
 
-import com.Kuhouinn.fetch2.AbstractFetchListener;
-import com.Kuhouinn.fetch2.DefaultFetchNotificationManager;
-import com.Kuhouinn.fetch2.Download;
-import com.Kuhouinn.fetch2.Error;
-import com.Kuhouinn.fetch2core.Downloader;
-import com.Kuhouinn.fetch2.Fetch;
-import com.Kuhouinn.fetch2.FetchListener;
-import com.Kuhouinn.fetch2.NetworkType;
-import com.Kuhouinn.fetch2.Request;
-import com.Kuhouinn.fetch2.FetchConfiguration;
-import com.Kuhouinn.fetch2okhttp.OkHttpDownloader;
+import com.GKuhouinn.fetch2.AbstractFetchListener;
+import com.GKuhouinn.fetch2.DefaultFetchNotificationManager;
+import com.GKuhouinn.fetch2.Download;
+import com.GKuhouinn.fetch2.Error;
+import com.GKuhouinn.fetch2core.Downloader;
+import com.GKuhouinn.fetch2.Fetch;
+import com.GKuhouinn.fetch2.FetchListener;
+import com.GKuhouinn.fetch2.NetworkType;
+import com.GKuhouinn.fetch2.Request;
+import com.GKuhouinn.fetch2.FetchConfiguration;
+import com.GKuhouinn.fetch2okhttp.OkHttpDownloader;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

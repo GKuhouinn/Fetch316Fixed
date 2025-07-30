@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2.provider
+package com.GKuhouinn.fetch2.provider
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -9,10 +9,10 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Build
-import com.Kuhouinn.fetch2.NetworkType
-import com.Kuhouinn.fetch2core.isNetworkAvailable
-import com.Kuhouinn.fetch2core.isOnMeteredConnection
-import com.Kuhouinn.fetch2core.isOnWiFi
+import com.GKuhouinn.fetch2.NetworkType
+import com.GKuhouinn.fetch2core.isNetworkAvailable
+import com.GKuhouinn.fetch2core.isOnMeteredConnection
+import com.GKuhouinn.fetch2core.isOnWiFi
 import java.net.HttpURLConnection
 import java.net.URL
 

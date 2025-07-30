@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 import android.net.Uri
 import java.io.Closeable
@@ -12,7 +12,7 @@ import java.io.InputStream
  * by this class when it is no longer needed. Also, the methods in this interface can be called
  * by multiple threads. You are also responsible for making it thread safe when appropriate.
  * For an example see
- * @see com.Kuhouinn.fetch2.HttpUrlConnectionDownloader
+ * @see com.GKuhouinn.fetch2.HttpUrlConnectionDownloader
  * */
 interface Downloader<T, R> : Closeable {
 
@@ -36,7 +36,7 @@ interface Downloader<T, R> : Closeable {
      * @return Response containing the server response code, headers, connection success, content-length,
      * and input stream if a connection was successful.
      * For an example:
-     * @see com.Kuhouinn.fetch2.HttpUrlConnectionDownloader.execute
+     * @see com.GKuhouinn.fetch2.HttpUrlConnectionDownloader.execute
      * */
     fun execute(request: ServerRequest, interruptMonitor: InterruptMonitor): Response?
 
@@ -45,7 +45,7 @@ interface Downloader<T, R> : Closeable {
      * Perform any clean against the passed in response. This method is called on a background thread.
      * @param response Response containing the server response code, headers, connection success, content-length,
      * and input stream if a connection was successful.
-     * @see com.Kuhouinn.fetch2.HttpUrlConnectionDownloader.disconnect
+     * @see com.GKuhouinn.fetch2.HttpUrlConnectionDownloader.disconnect
      * */
     fun disconnect(response: Response)
 

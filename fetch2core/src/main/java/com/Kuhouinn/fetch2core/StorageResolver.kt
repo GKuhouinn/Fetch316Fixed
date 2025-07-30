@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 /**
  * This interface can be implemented by a class to create a custom StorageResolver.

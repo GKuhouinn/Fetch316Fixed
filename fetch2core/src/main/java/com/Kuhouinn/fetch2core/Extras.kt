@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -13,7 +13,7 @@ import java.io.Serializable
  *
  *  Use the mutable version of this class to update information on a request/download
  *  on a fetch instance with the matching namespace for the request/download.
- *  @see com.Kuhouinn.fetch2.Fetch.replaceExtras(id, extras, func, func) method.
+ *  @see com.GKuhouinn.fetch2.Fetch.replaceExtras(id, extras, func, func) method.
  * */
 open class Extras(
         /** Map that holds the custom data.*/

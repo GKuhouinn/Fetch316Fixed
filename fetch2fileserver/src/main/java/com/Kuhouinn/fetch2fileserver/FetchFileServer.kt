@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
 import android.content.Context
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 import java.net.ServerSocket
 
 /** A lightweight TCP File Server that acts like an HTTP file server

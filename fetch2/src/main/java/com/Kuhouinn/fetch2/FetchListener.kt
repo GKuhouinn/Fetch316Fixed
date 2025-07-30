@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.DownloadBlock
+import com.GKuhouinn.fetch2core.DownloadBlock
 
 /**
  * Listener used by Fetch to report the different statuses and changes of the downloads
  * managed by Fetch
- * @see com.Kuhouinn.fetch2.Status
+ * @see com.GKuhouinn.fetch2.Status
  * */
 interface FetchListener {
 

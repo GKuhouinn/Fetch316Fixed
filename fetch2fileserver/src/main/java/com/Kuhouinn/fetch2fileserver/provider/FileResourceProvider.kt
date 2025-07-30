@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2fileserver.provider
+package com.GKuhouinn.fetch2fileserver.provider
 
-import com.Kuhouinn.fetch2core.FileResource
+import com.GKuhouinn.fetch2core.FileResource
 
 interface FileResourceProvider {
 

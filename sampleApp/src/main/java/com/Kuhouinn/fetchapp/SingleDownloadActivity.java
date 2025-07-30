@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -11,16 +11,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.Kuhouinn.fetch2.Download;
-import com.Kuhouinn.fetch2.Error;
-import com.Kuhouinn.fetch2.Fetch;
-import com.Kuhouinn.fetch2.Request;
-import com.Kuhouinn.fetch2.Status;
-import com.Kuhouinn.fetch2core.Extras;
-import com.Kuhouinn.fetch2core.FetchObserver;
-import com.Kuhouinn.fetch2core.Func;
-import com.Kuhouinn.fetch2core.MutableExtras;
-import com.Kuhouinn.fetch2core.Reason;
+import com.GKuhouinn.fetch2.Download;
+import com.GKuhouinn.fetch2.Error;
+import com.GKuhouinn.fetch2.Fetch;
+import com.GKuhouinn.fetch2.Request;
+import com.GKuhouinn.fetch2.Status;
+import com.GKuhouinn.fetch2core.Extras;
+import com.GKuhouinn.fetch2core.FetchObserver;
+import com.GKuhouinn.fetch2core.Func;
+import com.GKuhouinn.fetch2core.MutableExtras;
+import com.GKuhouinn.fetch2core.Reason;
 
 import org.jetbrains.annotations.NotNull;
 

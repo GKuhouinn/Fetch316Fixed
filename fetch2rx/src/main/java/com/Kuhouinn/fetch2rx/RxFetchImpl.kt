@@ -1,19 +1,19 @@
-package com.Kuhouinn.fetch2rx
+package com.GKuhouinn.fetch2rx
 
 import android.os.Handler
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.fetch.FetchHandler
-import com.Kuhouinn.fetch2.fetch.FetchModulesBuilder.Modules
-import com.Kuhouinn.fetch2.fetch.ListenerCoordinator
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
-import com.Kuhouinn.fetch2.util.ActiveDownloadInfo
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_AUTOSTART_ON_ATTACHED
-import com.Kuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
-import com.Kuhouinn.fetch2.util.toDownloadInfo
-import com.Kuhouinn.fetch2core.*
-import com.Kuhouinn.fetch2rx.util.toConvertible
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.fetch.FetchHandler
+import com.GKuhouinn.fetch2.fetch.FetchModulesBuilder.Modules
+import com.GKuhouinn.fetch2.fetch.ListenerCoordinator
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.util.ActiveDownloadInfo
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_AUTOSTART_ON_ATTACHED
+import com.GKuhouinn.fetch2.util.DEFAULT_ENABLE_LISTENER_NOTIFY_ON_ATTACHED
+import com.GKuhouinn.fetch2.util.toDownloadInfo
+import com.GKuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2rx.util.toConvertible
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 
@@ -1142,7 +1142,7 @@ open class RxFetchImpl(override val namespace: String,
     }
 
     override fun awaitFinishOrTimeout(allowTimeInMilliseconds: Long) {
-        com.Kuhouinn.fetch2.util.awaitFinishOrTimeout(allowTimeInMilliseconds, fetchHandler)
+        com.GKuhouinn.fetch2.util.awaitFinishOrTimeout(allowTimeInMilliseconds, fetchHandler)
     }
 
     override fun awaitFinish() {

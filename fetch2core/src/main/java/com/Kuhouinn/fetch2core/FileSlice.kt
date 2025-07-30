@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 data class FileSlice(val id: Int = 0,
                      val position: Int = 0,

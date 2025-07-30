@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2.downloader
+package com.GKuhouinn.fetch2.downloader
 
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.Error
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2core.DownloadBlock
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.Error
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2core.DownloadBlock
 
 interface FileDownloader : Runnable {
 

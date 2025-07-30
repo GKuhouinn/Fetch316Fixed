@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2fileserver.database
+package com.GKuhouinn.fetch2fileserver.database
 
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.FileResource
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.FileResource
 import org.json.JSONObject
 
 fun FileResource.toFileResourceInfo(): FileResourceInfo {

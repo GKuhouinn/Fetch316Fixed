@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,7 +8,7 @@ import java.io.Serializable
  *  Mutable extras class that sets and holds custom key/value pair data for a request and download.
  *  Use this class to update/store custom information that belongs to a request/download.
  *  Save this extra on a fetch instance with the matching namespace for the request/download.
- *  @see com.Kuhouinn.fetch2.Fetch.replaceExtras(id, extras, func, func) method.
+ *  @see com.GKuhouinn.fetch2.Fetch.replaceExtras(id, extras, func, func) method.
  * */
 open class MutableExtras(protected val mutableData: MutableMap<String, String> = mutableMapOf())
     : Extras(mutableData), Serializable {

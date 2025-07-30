@@ -1,14 +1,14 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.database.FetchDatabaseManager
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.fetch.FetchHandler
-import com.Kuhouinn.fetch2.util.*
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManager
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.fetch.FetchHandler
+import com.GKuhouinn.fetch2.util.*
+import com.GKuhouinn.fetch2core.*
 
 /**
  * Class used to hold the configuration settings for a Fetch instance.
@@ -94,9 +94,9 @@ class FetchConfiguration private constructor(val appContext: Context,
         /**
          * Sets the httpDownloader client Fetch will use to perform http downloads.
          * The default httpDownloader uses the HttpUrlConnection client to perform downloads.
-         * @see com.Kuhouinn.fetch2core.Downloader
-         * @see com.Kuhouinn.fetch2.HttpUrlConnectionDownloader
-         * @see com.Kuhouinn.fetch2okhttp.OkHttpDownloader
+         * @see com.GKuhouinn.fetch2core.Downloader
+         * @see com.GKuhouinn.fetch2.HttpUrlConnectionDownloader
+         * @see com.GKuhouinn.fetch2okhttp.OkHttpDownloader
          * @param downloader Downloader Client
          * @return Builder
          * */
@@ -107,8 +107,8 @@ class FetchConfiguration private constructor(val appContext: Context,
 
         /**
          * Sets the downloader client Fetch will use to perform downloads from a TCP File Server.
-         * @see com.Kuhouinn.fetch2.Downloader
-         * @see com.Kuhouinn.fetch2.FileServerDownloader
+         * @see com.GKuhouinn.fetch2.Downloader
+         * @see com.GKuhouinn.fetch2.FileServerDownloader
          * @param downloader Downloader Client for Fetch File Server
          * @return Builder
          * */
@@ -119,7 +119,7 @@ class FetchConfiguration private constructor(val appContext: Context,
 
         /**
          * Sets the progress reporting interval in milliseconds. This controls how often
-         * @see com.Kuhouinn.fetch2.FetchListener.onProgress is called for each
+         * @see com.GKuhouinn.fetch2.FetchListener.onProgress is called for each
          * download. The default value is 2 seconds.
          * This method can only accept values greater than 0.
          * @param progressReportingIntervalMillis Progress reporting interval in milliseconds
@@ -154,7 +154,7 @@ class FetchConfiguration private constructor(val appContext: Context,
         /**
          * Overrides each downloads specified network type preference and use the
          * global network type preference instead. The default is GLOBAL_OFF.
-         * @see com.Kuhouinn.fetch2.NetworkType
+         * @see com.GKuhouinn.fetch2.NetworkType
          * @param networkType The global network type.
          * @return Builder
          * */

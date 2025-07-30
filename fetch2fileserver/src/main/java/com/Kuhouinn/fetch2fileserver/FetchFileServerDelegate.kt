@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.FileResource
-import com.Kuhouinn.fetch2core.InputResourceWrapper
-import com.Kuhouinn.fetch2core.InterruptMonitor
-import com.Kuhouinn.fetch2core.server.FileRequest
-import com.Kuhouinn.fetch2core.server.FileResourceTransporterWriter
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.FileResource
+import com.GKuhouinn.fetch2core.InputResourceWrapper
+import com.GKuhouinn.fetch2core.InterruptMonitor
+import com.GKuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FileResourceTransporterWriter
 
 /**
  * Delegate that can be attached to a Fetch File Server instance to take certain actions

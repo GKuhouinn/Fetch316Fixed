@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2rx.util
+package com.GKuhouinn.fetch2rx.util
 
-import com.Kuhouinn.fetch2rx.Convertible
+import com.GKuhouinn.fetch2rx.Convertible
 import io.reactivex.Flowable
 
 fun <T> Flowable<T>.toConvertible(): Convertible<T> {

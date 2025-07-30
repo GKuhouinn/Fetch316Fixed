@@ -1,13 +1,13 @@
-package com.Kuhouinn.fetch2core.server
+package com.GKuhouinn.fetch2core.server
 
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_CONNECTION
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_CONTENT_LENGTH
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_DATE
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_MD5
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_SESSION_ID
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_STATUS
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_TYPE
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_CONNECTION
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_CONTENT_LENGTH
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_DATE
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_MD5
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_SESSION_ID
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_STATUS
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.FIELD_TYPE
 import org.json.JSONObject
 import java.io.DataInputStream
 import java.io.DataOutputStream

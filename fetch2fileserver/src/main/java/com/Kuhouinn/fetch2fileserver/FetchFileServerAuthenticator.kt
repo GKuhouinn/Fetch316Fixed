@@ -1,6 +1,6 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
-import com.Kuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FileRequest
 
 /** Used to authenticate clients trying to connect to the Fetch File Server
  * instance this authenticator instance is attached to.*/

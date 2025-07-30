@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2core.server
+package com.GKuhouinn.fetch2core.server
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.Kuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.Extras
 import java.io.Serializable
 import java.lang.StringBuilder
 

@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 import android.net.Uri
 import android.os.Parcelable
-import com.Kuhouinn.fetch2.util.DEFAULT_AUTO_RETRY_ATTEMPTS
-import com.Kuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2.util.DEFAULT_AUTO_RETRY_ATTEMPTS
+import com.GKuhouinn.fetch2core.Extras
 import java.io.Serializable
 
 /**
@@ -30,7 +30,7 @@ interface Download : Parcelable, Serializable {
     val group: Int
 
     /** The download Priority of this download.
-     * @see com.Kuhouinn.fetch2.Priority
+     * @see com.GKuhouinn.fetch2.Priority
      * */
     val priority: Priority
 
@@ -48,19 +48,19 @@ interface Download : Parcelable, Serializable {
     val seekPosition: Long
 
     /** The current status of a download.
-     *  @see com.Kuhouinn.fetch2.Status
+     *  @see com.GKuhouinn.fetch2.Status
      *  */
     val status: Status
 
     /** If the download encountered an error, the download status will be Status.Failed and
      *  this field will provide the specific error when possible.
      *  Otherwise the default non-error value is Error.NONE.
-     *  @see com.Kuhouinn.fetch2.Error
+     *  @see com.GKuhouinn.fetch2.Error
      *  */
     val error: Error
 
     /** The network type this download is allowed to download on.
-     * @see com.Kuhouinn.fetch2.NetworkType
+     * @see com.GKuhouinn.fetch2.NetworkType
      * */
     val networkType: NetworkType
 

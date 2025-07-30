@@ -1,10 +1,10 @@
-package com.Kuhouinn.fetch2;
+package com.GKuhouinn.fetch2;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.Kuhouinn.fetch2core.FetchLogger;
+import com.GKuhouinn.fetch2core.FetchLogger;
 
 import org.junit.After;
 import org.junit.Before;

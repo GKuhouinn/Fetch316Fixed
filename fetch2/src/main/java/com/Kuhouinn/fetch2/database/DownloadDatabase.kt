@@ -1,10 +1,10 @@
-package com.Kuhouinn.fetch2.database
+package com.GKuhouinn.fetch2.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.Kuhouinn.fetch2.database.DownloadDatabase.Companion.DATABASE_VERSION
-import com.Kuhouinn.fetch2.database.migration.*
+import com.GKuhouinn.fetch2.database.DownloadDatabase.Companion.DATABASE_VERSION
+import com.GKuhouinn.fetch2.database.migration.*
 
 @Database(entities = [DownloadInfo::class], version = DATABASE_VERSION, exportSchema = false)
 @TypeConverters(value = [Converter::class])

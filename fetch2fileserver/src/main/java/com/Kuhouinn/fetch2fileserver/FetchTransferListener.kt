@@ -1,7 +1,7 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
-import com.Kuhouinn.fetch2core.FileResource
-import com.Kuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.FileResource
+import com.GKuhouinn.fetch2core.server.FileRequest
 
 /** Listener that can be attached to a Fetch File Server instance
  * and reports connected clients content file transfer progress.*/

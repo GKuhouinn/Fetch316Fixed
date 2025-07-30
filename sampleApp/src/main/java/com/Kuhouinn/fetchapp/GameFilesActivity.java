@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.Manifest;
 import android.content.Context;
@@ -16,13 +16,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.Kuhouinn.fetch2.AbstractFetchListener;
-import com.Kuhouinn.fetch2.Download;
-import com.Kuhouinn.fetch2.Error;
-import com.Kuhouinn.fetch2.FetchErrorUtils;
-import com.Kuhouinn.fetch2.FetchListener;
-import com.Kuhouinn.fetch2.Request;
-import com.Kuhouinn.fetch2rx.RxFetch;
+import com.GKuhouinn.fetch2.AbstractFetchListener;
+import com.GKuhouinn.fetch2.Download;
+import com.GKuhouinn.fetch2.Error;
+import com.GKuhouinn.fetch2.FetchErrorUtils;
+import com.GKuhouinn.fetch2.FetchListener;
+import com.GKuhouinn.fetch2.Request;
+import com.GKuhouinn.fetch2rx.RxFetch;
 
 import org.jetbrains.annotations.NotNull;
 

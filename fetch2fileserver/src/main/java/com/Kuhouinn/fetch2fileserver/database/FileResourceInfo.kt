@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2fileserver.database
+package com.GKuhouinn.fetch2fileserver.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

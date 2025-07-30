@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchmigrator.fetch1
+package com.GKuhouinn.fetchmigrator.fetch1
 
 internal object ErrorUtils {
     const val FILE_NOT_CREATED = -102

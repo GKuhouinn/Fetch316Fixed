@@ -1,15 +1,15 @@
 @file:JvmName("FetchUtils")
 
-package com.Kuhouinn.fetch2.util
+package com.GKuhouinn.fetch2.util
 
 import android.os.Looper
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.Request
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.fetch.FetchHandler
-import com.Kuhouinn.fetch2core.*
-import com.Kuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.Request
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.fetch.FetchHandler
+import com.GKuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.server.FileRequest
 import java.io.File
 import kotlin.math.ceil
 

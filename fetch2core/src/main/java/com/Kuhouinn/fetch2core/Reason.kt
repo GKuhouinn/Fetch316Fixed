@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 /**
  * The reasons why onChanged method was called for a FetchObserver.

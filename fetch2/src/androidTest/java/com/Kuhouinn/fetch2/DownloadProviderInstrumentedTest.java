@@ -1,21 +1,21 @@
-package com.Kuhouinn.fetch2;
+package com.GKuhouinn.fetch2;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.Kuhouinn.fetch2.database.FetchDatabaseManager;
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerImpl;
-import com.Kuhouinn.fetch2.database.DownloadDatabase;
-import com.Kuhouinn.fetch2.database.DownloadInfo;
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper;
-import com.Kuhouinn.fetch2.database.migration.Migration;
-import com.Kuhouinn.fetch2.fetch.LiveSettings;
-import com.Kuhouinn.fetch2.provider.DownloadProvider;
-import com.Kuhouinn.fetch2.util.FetchTypeConverterExtensions;
-import com.Kuhouinn.fetch2core.DefaultStorageResolver;
-import com.Kuhouinn.fetch2core.FetchCoreUtils;
-import com.Kuhouinn.fetch2core.FetchLogger;
+import com.GKuhouinn.fetch2.database.FetchDatabaseManager;
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerImpl;
+import com.GKuhouinn.fetch2.database.DownloadDatabase;
+import com.GKuhouinn.fetch2.database.DownloadInfo;
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper;
+import com.GKuhouinn.fetch2.database.migration.Migration;
+import com.GKuhouinn.fetch2.fetch.LiveSettings;
+import com.GKuhouinn.fetch2.provider.DownloadProvider;
+import com.GKuhouinn.fetch2.util.FetchTypeConverterExtensions;
+import com.GKuhouinn.fetch2core.DefaultStorageResolver;
+import com.GKuhouinn.fetch2core.FetchCoreUtils;
+import com.GKuhouinn.fetch2core.FetchLogger;
 
 import org.junit.After;
 import org.junit.Before;
@@ -41,7 +41,7 @@ public class DownloadProviderInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         appContext = InstrumentationRegistry.getTargetContext();
-        assertEquals("com.Kuhouinn.fetch2.test", appContext.getPackageName());
+        assertEquals("com.GKuhouinn.fetch2.test", appContext.getPackageName());
         final String namespace = "fetch2DatabaseTest";
         final Migration[] migrations = DownloadDatabase.getMigrations();
         FetchLogger fetchLogger = new FetchLogger(true, namespace);

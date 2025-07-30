@@ -1,6 +1,6 @@
 @file:JvmName("FetchErrorStrings")
 
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 const val DOWNLOAD_NOT_FOUND = "fetch download not found"
 const val FAILED_TO_ENQUEUE_REQUEST = "UNIQUE constraint failed: requests._id (code 1555)"

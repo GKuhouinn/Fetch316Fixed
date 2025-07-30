@@ -1,11 +1,11 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
-import com.Kuhouinn.fetch2core.DownloadBlock
+import com.GKuhouinn.fetch2core.DownloadBlock
 
 /**
  * Listener used by Fetch to report the different statuses and changes of the downloads
  * managed by Fetch. This listener's callbacks also returns the group information.
- * @see com.Kuhouinn.fetch2.Status
+ * @see com.GKuhouinn.fetch2.Status
  * Note: Attaching a FetchGroupListener to a Fetch instance adds an additional overhead to keep the fetchGroup
  * information returned fresh with the latest details for downloads in the group. If are handling group information
  * manually or do not need group information on listener callbacks, use the FetchListener interface or the AbstractFetchListener class.

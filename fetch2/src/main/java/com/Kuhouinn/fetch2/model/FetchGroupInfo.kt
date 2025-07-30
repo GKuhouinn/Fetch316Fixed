@@ -1,13 +1,13 @@
-package com.Kuhouinn.fetch2.model
+package com.GKuhouinn.fetch2.model
 
-import com.Kuhouinn.fetch2.Download
-import com.Kuhouinn.fetch2.FetchGroup
-import com.Kuhouinn.fetch2.FetchGroupObserver
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.fetch.FetchModulesBuilder
-import com.Kuhouinn.fetch2core.FetchObserver
-import com.Kuhouinn.fetch2core.Reason
-import com.Kuhouinn.fetch2core.calculateProgress
+import com.GKuhouinn.fetch2.Download
+import com.GKuhouinn.fetch2.FetchGroup
+import com.GKuhouinn.fetch2.FetchGroupObserver
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.fetch.FetchModulesBuilder
+import com.GKuhouinn.fetch2core.FetchObserver
+import com.GKuhouinn.fetch2core.Reason
+import com.GKuhouinn.fetch2core.calculateProgress
 
 class FetchGroupInfo(override val id: Int = 0,
                      override val namespace: String): FetchGroup {

@@ -1,9 +1,9 @@
-package com.Kuhouinn.fetch2.util
+package com.GKuhouinn.fetch2.util
 
 import android.content.Context
 import android.content.Intent
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2core.Logger
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2core.Logger
 
 fun onDownloadNotificationActionTriggered(context: Context?, intent: Intent?, fetchNotificationManager: FetchNotificationManager) {
     if (context != null && intent != null) {

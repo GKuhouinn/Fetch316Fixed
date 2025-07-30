@@ -1,14 +1,14 @@
-package com.Kuhouinn.fetch2fileserver.provider
+package com.GKuhouinn.fetch2fileserver.provider
 
 import android.os.Handler
-import com.Kuhouinn.fetch2core.*
-import com.Kuhouinn.fetch2core.server.FileRequest
-import com.Kuhouinn.fetch2core.server.FileResponse
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.CLOSE_CONNECTION
-import com.Kuhouinn.fetch2core.server.FileResponse.CREATOR.OPEN_CONNECTION
-import com.Kuhouinn.fetch2core.server.FileResourceTransporter
-import com.Kuhouinn.fetch2core.server.FetchFileResourceTransporter
-import com.Kuhouinn.fetch2fileserver.FileResolver
+import com.GKuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FileResponse
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.CLOSE_CONNECTION
+import com.GKuhouinn.fetch2core.server.FileResponse.CREATOR.OPEN_CONNECTION
+import com.GKuhouinn.fetch2core.server.FileResourceTransporter
+import com.GKuhouinn.fetch2core.server.FetchFileResourceTransporter
+import com.GKuhouinn.fetch2fileserver.FileResolver
 import java.net.HttpURLConnection
 import java.net.Socket
 import java.util.*

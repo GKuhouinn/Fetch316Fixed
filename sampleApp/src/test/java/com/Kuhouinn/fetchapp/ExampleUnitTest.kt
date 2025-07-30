@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetchapp
+package com.GKuhouinn.fetchapp
 
 import org.junit.Test
 

@@ -1,16 +1,16 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
 import android.os.Handler
 import android.os.Looper
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2.database.FetchDatabaseManagerWrapper
-import com.Kuhouinn.fetch2.downloader.DownloadManager
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.helper.PriorityListProcessor
-import com.Kuhouinn.fetch2.provider.GroupInfoProvider
-import com.Kuhouinn.fetch2.util.*
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2.database.FetchDatabaseManagerWrapper
+import com.GKuhouinn.fetch2.downloader.DownloadManager
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.helper.PriorityListProcessor
+import com.GKuhouinn.fetch2.provider.GroupInfoProvider
+import com.GKuhouinn.fetch2.util.*
+import com.GKuhouinn.fetch2core.*
 import java.io.IOException
 import java.util.*
 import android.database.sqlite.SQLiteDatabaseLockedException

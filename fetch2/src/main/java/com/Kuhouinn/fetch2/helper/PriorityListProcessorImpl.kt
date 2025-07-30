@@ -1,19 +1,19 @@
-package com.Kuhouinn.fetch2.helper
+package com.GKuhouinn.fetch2.helper
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.downloader.DownloadManager
-import com.Kuhouinn.fetch2core.HandlerWrapper
-import com.Kuhouinn.fetch2.provider.DownloadProvider
-import com.Kuhouinn.fetch2.provider.NetworkInfoProvider
-import com.Kuhouinn.fetch2.util.DEFAULT_PRIORITY_QUEUE_INTERVAL_IN_MILLISECONDS
-import com.Kuhouinn.fetch2.NetworkType
-import com.Kuhouinn.fetch2.fetch.ListenerCoordinator
-import com.Kuhouinn.fetch2core.Logger
-import com.Kuhouinn.fetch2core.isFetchFileServerUrl
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.downloader.DownloadManager
+import com.GKuhouinn.fetch2core.HandlerWrapper
+import com.GKuhouinn.fetch2.provider.DownloadProvider
+import com.GKuhouinn.fetch2.provider.NetworkInfoProvider
+import com.GKuhouinn.fetch2.util.DEFAULT_PRIORITY_QUEUE_INTERVAL_IN_MILLISECONDS
+import com.GKuhouinn.fetch2.NetworkType
+import com.GKuhouinn.fetch2.fetch.ListenerCoordinator
+import com.GKuhouinn.fetch2core.Logger
+import com.GKuhouinn.fetch2core.isFetchFileServerUrl
 import java.util.concurrent.TimeUnit
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 

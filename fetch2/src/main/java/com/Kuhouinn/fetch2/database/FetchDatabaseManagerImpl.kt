@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2.database
+package com.GKuhouinn.fetch2.database
 
 
 import android.content.Context
@@ -6,15 +6,15 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteException
 import androidx.room.Room
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.Kuhouinn.fetch2.PrioritySort
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2.database.migration.Migration
-import com.Kuhouinn.fetch2.exception.FetchException
-import com.Kuhouinn.fetch2.fetch.LiveSettings
-import com.Kuhouinn.fetch2.util.defaultNoError
-import com.Kuhouinn.fetch2core.DefaultStorageResolver
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.Logger
+import com.GKuhouinn.fetch2.PrioritySort
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2.database.migration.Migration
+import com.GKuhouinn.fetch2.exception.FetchException
+import com.GKuhouinn.fetch2.fetch.LiveSettings
+import com.GKuhouinn.fetch2.util.defaultNoError
+import com.GKuhouinn.fetch2core.DefaultStorageResolver
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.Logger
 
 
 class FetchDatabaseManagerImpl constructor(context: Context,

@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2.fetch
+package com.GKuhouinn.fetch2.fetch
 
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.database.DownloadInfo
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.database.DownloadInfo
+import com.GKuhouinn.fetch2core.*
 import java.io.Closeable
 
 /**

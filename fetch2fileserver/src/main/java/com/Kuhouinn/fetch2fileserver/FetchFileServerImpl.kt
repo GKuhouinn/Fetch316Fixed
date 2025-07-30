@@ -1,20 +1,20 @@
-package com.Kuhouinn.fetch2fileserver
+package com.GKuhouinn.fetch2fileserver
 
 import android.content.Context
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Looper
-import com.Kuhouinn.fetch2core.*
+import com.GKuhouinn.fetch2core.*
 
-import com.Kuhouinn.fetch2fileserver.database.FetchFileResourceInfoDatabase
-import com.Kuhouinn.fetch2fileserver.database.FileResourceInfo
-import com.Kuhouinn.fetch2fileserver.database.toFileResource
-import com.Kuhouinn.fetch2fileserver.database.toFileResourceInfo
-import com.Kuhouinn.fetch2fileserver.provider.FileResourceProvider
-import com.Kuhouinn.fetch2fileserver.provider.FileResourceProviderDelegate
-import com.Kuhouinn.fetch2fileserver.provider.FetchFileResourceProvider
-import com.Kuhouinn.fetch2core.server.FileRequest
-import com.Kuhouinn.fetch2core.server.FileResourceTransporterWriter
+import com.GKuhouinn.fetch2fileserver.database.FetchFileResourceInfoDatabase
+import com.GKuhouinn.fetch2fileserver.database.FileResourceInfo
+import com.GKuhouinn.fetch2fileserver.database.toFileResource
+import com.GKuhouinn.fetch2fileserver.database.toFileResourceInfo
+import com.GKuhouinn.fetch2fileserver.provider.FileResourceProvider
+import com.GKuhouinn.fetch2fileserver.provider.FileResourceProviderDelegate
+import com.GKuhouinn.fetch2fileserver.provider.FetchFileResourceProvider
+import com.GKuhouinn.fetch2core.server.FileRequest
+import com.GKuhouinn.fetch2core.server.FileResourceTransporterWriter
 import org.json.JSONObject
 import java.net.ServerSocket
 import java.net.Socket

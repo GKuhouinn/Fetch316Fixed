@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2fileserver;
+package com.GKuhouinn.fetch2fileserver;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.Kuhouinn.fetch2fileserver.test", appContext.getPackageName());
+        assertEquals("com.GKuhouinn.fetch2fileserver.test", appContext.getPackageName());
     }
 }

@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2.database.migration
+package com.GKuhouinn.fetch2.database.migration
 
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.Kuhouinn.fetch2.database.DownloadDatabase
-import com.Kuhouinn.fetch2.util.EMPTY_JSON_OBJECT_STRING
+import com.GKuhouinn.fetch2.database.DownloadDatabase
+import com.GKuhouinn.fetch2.util.EMPTY_JSON_OBJECT_STRING
 
 class MigrationFiveToSix : Migration(5, 6) {
 

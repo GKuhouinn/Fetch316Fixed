@@ -1,12 +1,12 @@
-package com.Kuhouinn.fetchapp;
+package com.GKuhouinn.fetchapp;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
 import androidx.annotation.NonNull;
 
-import com.Kuhouinn.fetch2.Priority;
-import com.Kuhouinn.fetch2.Request;
+import com.GKuhouinn.fetch2.Priority;
+import com.GKuhouinn.fetch2.Request;
 
 import java.util.ArrayList;
 import java.util.List;

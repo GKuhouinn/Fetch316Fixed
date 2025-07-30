@@ -4,7 +4,7 @@
  * gradle plugin from the resource data it found. It
  * should not be modified by hand.
  */
-package com.Kuhouinn.fetch2fileserver;
+package com.GKuhouinn.fetch2fileserver;
 
 public final class R {
     public static final class anim {

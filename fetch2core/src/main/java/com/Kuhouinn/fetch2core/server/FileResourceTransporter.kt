@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2core.server
+package com.GKuhouinn.fetch2core.server
 
 import java.io.InputStream
 import java.io.OutputStream

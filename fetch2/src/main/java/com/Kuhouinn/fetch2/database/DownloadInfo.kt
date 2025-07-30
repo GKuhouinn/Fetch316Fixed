@@ -1,17 +1,17 @@
-package com.Kuhouinn.fetch2.database
+package com.GKuhouinn.fetch2.database
 
 import androidx.room.*
 import android.net.Uri
 import android.os.Parcel
 import android.os.Parcelable
-import com.Kuhouinn.fetch2.*
-import com.Kuhouinn.fetch2.util.*
-import com.Kuhouinn.fetch2.NetworkType
-import com.Kuhouinn.fetch2.Priority
-import com.Kuhouinn.fetch2.Status
-import com.Kuhouinn.fetch2core.Extras
-import com.Kuhouinn.fetch2core.calculateProgress
-import com.Kuhouinn.fetch2core.getFileUri
+import com.GKuhouinn.fetch2.*
+import com.GKuhouinn.fetch2.util.*
+import com.GKuhouinn.fetch2.NetworkType
+import com.GKuhouinn.fetch2.Priority
+import com.GKuhouinn.fetch2.Status
+import com.GKuhouinn.fetch2core.Extras
+import com.GKuhouinn.fetch2core.calculateProgress
+import com.GKuhouinn.fetch2core.getFileUri
 import java.util.*
 
 

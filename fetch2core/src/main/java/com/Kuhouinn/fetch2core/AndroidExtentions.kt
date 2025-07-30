@@ -1,6 +1,6 @@
 @file:JvmName("FetchAndroidExtensions")
 
-package com.Kuhouinn.fetch2core
+package com.GKuhouinn.fetch2core
 
 import android.content.Context
 import android.net.ConnectivityManager

@@ -1,4 +1,4 @@
-package com.Kuhouinn.fetch2.database.migration
+package com.GKuhouinn.fetch2.database.migration
 
 import androidx.room.migration.Migration
 

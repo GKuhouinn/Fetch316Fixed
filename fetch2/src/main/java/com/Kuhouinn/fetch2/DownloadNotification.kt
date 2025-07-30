@@ -1,8 +1,8 @@
-package com.Kuhouinn.fetch2
+package com.GKuhouinn.fetch2
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.Kuhouinn.fetch2.util.DEFAULT_INSTANCE_NAMESPACE
+import com.GKuhouinn.fetch2.util.DEFAULT_INSTANCE_NAMESPACE
 import java.io.Serializable
 
 /** An object that represents a Fetch download notification.*/
