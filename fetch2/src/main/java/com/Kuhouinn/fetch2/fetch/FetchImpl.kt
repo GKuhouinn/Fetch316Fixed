@@ -395,10 +395,12 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun remove(id: Int): Fetch {
+        logger.d("fetchimpl remove()")
         return remove(id, null, null)
     }
 
     override fun remove(id: Int, func: Func<Download>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl remove() three params")
         return remove(listOf(id), Func { downloads ->
             if (downloads.isNotEmpty()) {
                 func?.call(downloads.first())
@@ -417,18 +419,22 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun removeAll(func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl removeAll two params()")
         return executeRemoveAction({ fetchHandler.removeAll() }, func, func2)
     }
 
     override fun removeAll(): Fetch {
+        logger.d("fetchimpl removeAll()")
         return removeAll(null, null)
     }
 
     override fun removeAllWithStatus(status: Status, func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl removeAllWithStatus() three params")
         return executeRemoveAction({ fetchHandler.removeAllWithStatus(status) }, func, func2)
     }
 
     override fun removeAllWithStatus(status: Status): Fetch {
+        logger.d("fetchimpl removeAllWithStatus()")
         return removeAllWithStatus(status, null, null)
     }
 
