@@ -84,6 +84,7 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
                 if (!shouldBackOff) {
                     shouldBackOff = true
                     for (index in 0..priorityList.lastIndex) {
+                        logger.d("遍历第 $index 项，总共 ${priorityList.lastIndex + 1} 项")
                         if (downloadManager.canAccommodateNewDownload() && canContinueToProcess()) {
                             val download = priorityList[index]
                             val isFetchServerRequest = isFetchFileServerUrl(download.url)
@@ -100,6 +101,7 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
                                 if ((isFetchServerRequest || properNetworkConditions)) {
                                     shouldBackOff = false
                                     if (!downloadManager.contains(download.id) && canContinueToProcess()) {
+                                        logger.d("priorityIteratorRunnable downloadManager.start：$download" )
                                         downloadManager.start(download)
                                     }
                                 }
