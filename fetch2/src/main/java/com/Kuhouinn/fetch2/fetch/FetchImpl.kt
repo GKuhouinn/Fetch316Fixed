@@ -561,6 +561,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun cancel(ids: List<Int>, func: Func<List<Download>>?, func2: Func<Error>?): Fetch {
+        logger.d("fetchimpl cancel()")
         return executeCancelAction({ fetchHandler.cancel(ids) }, func, func2)
     }
 
@@ -1197,6 +1198,7 @@ open class FetchImpl constructor(override val namespace: String,
     }
 
     override fun setDownloadConcurrentLimit(downloadConcurrentLimit: Int): Fetch {
+        logger.d("fetchimpl setDownloadConcurrentLimit downloadConcurrentLimit: $downloadConcurrentLimit")
         synchronized(lock) {
             throwExceptionIfClosed()
             if (downloadConcurrentLimit < 0) {

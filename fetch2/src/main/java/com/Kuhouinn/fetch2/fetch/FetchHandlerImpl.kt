@@ -438,18 +438,22 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     override fun cancel(ids: List<Int>): List<Download> {
+        logger.d("fetchhandlerimpl cancel()")
         return cancelDownloads(fetchDatabaseManagerWrapper.get(ids).filterNotNull())
     }
 
     override fun cancelGroup(id: Int): List<Download> {
+        logger.d("fetchhandlerimpl cancelGroup()")
         return cancelDownloads(fetchDatabaseManagerWrapper.getByGroup(id))
     }
 
     override fun cancelAll(): List<Download> {
+        logger.d("fetchhandlerimpl cancelAll()")
         return cancelDownloads(fetchDatabaseManagerWrapper.get())
     }
 
     private fun cancelDownloads(downloads: List<DownloadInfo>): List<Download> {
+        logger.d("fetchhandlerimpl cancelDownloads()")
         cancelDownloadsIfDownloading(downloads)
         val cancelledDownloads = mutableListOf<DownloadInfo>()
         downloads.forEach {
@@ -723,6 +727,7 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     override fun setGlobalNetworkType(networkType: NetworkType) {
+        logger.d("fetchhandlerimpl setGlobalNetworkType()")
         priorityListProcessor.stop()
         priorityListProcessor.globalNetworkType = networkType
         val ids = downloadManager.getActiveDownloadsIds()
@@ -744,6 +749,7 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     override fun setDownloadConcurrentLimit(downloadConcurrentLimit: Int) {
+        logger.d("fetchhandlerimpl setDownloadConcurrentLimit downloadConcurrentLimit: $downloadConcurrentLimit")
         priorityListProcessor.stop()
         val ids = downloadManager.getActiveDownloadsIds()
         if (ids.isNotEmpty()) {
@@ -851,6 +857,7 @@ class FetchHandlerImpl(private val namespace: String,
     }
 
     private fun cancelDownloadsIfDownloading(downloads: List<DownloadInfo>) {
+        logger.d("fetchhandlerimpl cancelDownloadsIfDownloading()")
         for (download in downloads) {
             downloadManager.cancel(download.id)
         }

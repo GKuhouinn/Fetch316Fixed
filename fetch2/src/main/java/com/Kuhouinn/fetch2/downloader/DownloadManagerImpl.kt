@@ -94,7 +94,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
                                 fileDownloader.delegate = getFileDownloaderDelegate()
                                 currentDownloadsMap[download.id] = fileDownloader
                                 downloadManagerCoordinator.addFileDownloader(download.id, fileDownloader)
-                                logger.d("DownloadManager starting download $download")
+                                logger.d("DownloadManager downloadCounter: $downloadCounter concurrentLimit: $concurrentLimit starting download $download")
                                 true
                             } else {
                                 false
@@ -133,6 +133,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
     }
 
     override fun cancel(downloadId: Int): Boolean {
+        logger.d("downloadmanager cancle()")
         return synchronized(lock) {
             cancelDownloadNoLock(downloadId)
         }
@@ -146,7 +147,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
             currentDownloadsMap.remove(downloadId)
             downloadCounter -= 1
             downloadManagerCoordinator.removeFileDownloader(downloadId)
-            logger.d("DownloadManager cancelled download ${fileDownloader.download}")
+            logger.d("DownloadManager cancelDownloadNoLock cancelled download ${fileDownloader.download}")
             fileDownloader.interrupted
         } else {
             downloadManagerCoordinator.interruptDownload(downloadId)
@@ -155,6 +156,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
     }
 
     override fun cancelAll() {
+        logger.d("downloadmanager cancle all")
         synchronized(lock) {
             throwExceptionIfClosed()
             cancelAllDownloads()
@@ -170,7 +172,7 @@ class DownloadManagerImpl(private val httpDownloader: Downloader<*, *>,
                         if (fileDownloader != null) {
                             fileDownloader.interrupted = true
                             downloadManagerCoordinator.removeFileDownloader(fileDownloader.download.id)
-                            logger.d("DownloadManager cancelled download ${fileDownloader.download}")
+                            logger.d("DownloadManager cancelAllDownloads cancelled download ${fileDownloader.download}")
                         }
                     }
         }

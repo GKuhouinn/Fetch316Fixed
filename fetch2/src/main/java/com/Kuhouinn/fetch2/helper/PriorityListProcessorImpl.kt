@@ -138,6 +138,7 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
             unregisterPriorityIterator()
             paused = false
             stopped = true
+            logger.d("PriorityIterator stop before cancle all")
             downloadManager.cancelAll()
             logger.d("PriorityIterator stop")
         }
@@ -216,16 +217,16 @@ class PriorityListProcessorImpl constructor(private val handlerWrapper: HandlerW
 
     private fun increaseBackOffTime() {
         backOffTime = if (backOffTime == DEFAULT_PRIORITY_QUEUE_INTERVAL_IN_MILLISECONDS) {
-            ONE_MINUTE_IN_MILLISECONDS
+            ONE_SECOND_IN_MILLISECONDS
         } else {
             backOffTime * 2L
         }
-        val minutes = TimeUnit.MILLISECONDS.toMinutes(backOffTime)
-        logger.d("PriorityIterator backoffTime increased to $minutes minute(s)")
+        //val minutes = TimeUnit.MILLISECONDS.toMinutes(backOffTime)
+        logger.d("PriorityIterator backoffTime increased to $ONE_SECOND_IN_MILLISECONDS MILLISECONDS(ms)")
     }
 
     private companion object {
-        private const val ONE_MINUTE_IN_MILLISECONDS = 60000L
+        private const val ONE_SECOND_IN_MILLISECONDS = 1000L
     }
 
 }
