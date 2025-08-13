@@ -8,7 +8,6 @@ import com.GKuhouinn.fetch2.Status
 import com.GKuhouinn.fetch2.util.DEFAULT_GLOBAL_AUTO_RETRY_ATTEMPTS
 import com.GKuhouinn.fetch2core.DownloadBlock
 import com.GKuhouinn.fetch2core.Logger
-import com.GKuhouinn.fetch2.util.Defaults
 
 
 class FileDownloaderDelegate(private val downloadInfoUpdater: DownloadInfoUpdater,
@@ -18,7 +17,6 @@ class FileDownloaderDelegate(private val downloadInfoUpdater: DownloadInfoUpdate
 
     @Volatile
     override var interrupted = false
-    val logger: Logger = defaultLogger
     override fun onStarted(download: Download, downloadBlocks: List<DownloadBlock>, totalBlocks: Int) {
         if (!interrupted) {
             val downloadInfo = download as DownloadInfo
@@ -47,6 +45,7 @@ class FileDownloaderDelegate(private val downloadInfoUpdater: DownloadInfoUpdate
             } else {
                 download.autoRetryMaxAttempts
             }
+            val logger: Logger = defaultLogger
             val downloadInfo = download as DownloadInfo
             logger.d("file downloader delegate onError()")
             if ( error == Error.NO_STORAGE_SPACE || error == Error.FILE_NOT_CREATED || error == Error.WRITE_PERMISSION_DENIED
