@@ -8,6 +8,7 @@ import com.GKuhouinn.fetch2.Status
 import com.GKuhouinn.fetch2.util.DEFAULT_GLOBAL_AUTO_RETRY_ATTEMPTS
 import com.GKuhouinn.fetch2core.DownloadBlock
 import com.GKuhouinn.fetch2core.Logger
+import com.GKuhouinn.fetch2.util.Defaults
 
 
 class FileDownloaderDelegate(private val downloadInfoUpdater: DownloadInfoUpdater,
