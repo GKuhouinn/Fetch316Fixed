@@ -186,6 +186,7 @@ class SequentialFileDownloaderImpl(private val initialDownload: Download,
                 if (!terminated && !interrupted) {
                     downloadInfo.etaInMilliSeconds = -1
                     downloadInfo.downloadedBytesPerSecond = -1
+                    logger.e("FileDownloader call onError delegate")
                     delegate?.onError(download = downloadInfo, error = error, throwable = e)
                 }
             }
